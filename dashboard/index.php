@@ -95,7 +95,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 		<div id="k_header_mobile" class="k-header-mobile  k-header-mobile--fixed ">
 			<div class="k-header-mobile__logo">
 				<a href="index.html">
-					<img alt="Logo" src="../assets/media/logos/logo100.png" />
+					<img alt="Logo" src="../assets/media/logos/image.png" />
 				</a>
 			</div>
 			<div class="k-header-mobile__toolbar">
@@ -272,89 +272,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 						<div class="k-header-menu-wrapper" id="k_header_menu_wrapper">
 							<div id="k_header_menu" class="k-header-menu k-header-menu-mobile ">
 								<ul class="k-menu__nav ">
-									<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel k-menu__item--active" data-kmenu-submenu-toggle="click" data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link k-menu__toggle"><span class="k-menu__link-text">Pages</span><i class="k-menu__hor-arrow la la-angle-down"></i><i class="k-menu__ver-arrow la la-angle-right"></i></a>
-										<div class="k-menu__submenu k-menu__submenu--classic k-menu__submenu--left">
-											<ul class="k-menu__subnav">
-												<li class="k-menu__item " aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Create New Post</span></a></li>
-												<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Generate Reports</span><span class="k-menu__link-badge"><span class="k-badge k-badge--success">2</span></span></a></li>
-												<li class="k-menu__item  k-menu__item--submenu" data-kmenu-submenu-toggle="hover" data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link k-menu__toggle"><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Manage Orders</span><i class="k-menu__hor-arrow la la-angle-right"></i><i class="k-menu__ver-arrow la la-angle-right"></i></a>
-													<div class="k-menu__submenu k-menu__submenu--classic k-menu__submenu--right">
-														<ul class="k-menu__subnav">
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Latest Orders</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Pending Orders</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Processed Orders</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Delivery Reports</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Payments</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Customers</span></a></li>
-														</ul>
-													</div>
-												</li>
-												<li class="k-menu__item  k-menu__item--submenu" data-kmenu-submenu-toggle="hover" data-kmenu-link-redirect="1" aria-haspopup="true"><a href="#" class="k-menu__link k-menu__toggle"><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Customer Feedbacks</span><i class="k-menu__hor-arrow la la-angle-right"></i><i class="k-menu__ver-arrow la la-angle-right"></i></a>
-													<div class="k-menu__submenu k-menu__submenu--classic k-menu__submenu--right">
-														<ul class="k-menu__subnav">
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Customer Feedbacks</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Supplier Feedbacks</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Reviewed Feedbacks</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Resolved Feedbacks</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Feedback Reports</span></a></li>
-														</ul>
-													</div>
-												</li>
-												<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Register Member</span></a></li>
-											</ul>
-										</div>
-									</li>
-									<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel" data-kmenu-submenu-toggle="click" data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link k-menu__toggle"><span class="k-menu__link-text">Reports</span><i class="k-menu__hor-arrow la la-angle-down"></i><i class="k-menu__ver-arrow la la-angle-right"></i></a>
-										<div class="k-menu__submenu  k-menu__submenu--fixed k-menu__submenu--left" style="width:1000px">
-											<div class="k-menu__subnav">
-												<ul class="k-menu__content">
-													<li class="k-menu__item ">
-														<h3 class="k-menu__heading k-menu__toggle"><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Finance Reports</span><i class="k-menu__ver-arrow la la-angle-right"></i></h3>
-														<ul class="k-menu__inner">
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-icon flaticon-map"></i><span class="k-menu__link-text">Annual Reports</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-icon flaticon-user"></i><span class="k-menu__link-text">HR Reports</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-icon flaticon-clipboard"></i><span class="k-menu__link-text">IPO Reports</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-icon flaticon-graphic-1"></i><span class="k-menu__link-text">Finance Margins</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-icon flaticon-graphic-2"></i><span class="k-menu__link-text">Revenue Reports</span></a></li>
-														</ul>
-													</li>
-													<li class="k-menu__item ">
-														<h3 class="k-menu__heading k-menu__toggle"><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Project Reports</span><i class="k-menu__ver-arrow la la-angle-right"></i></h3>
-														<ul class="k-menu__inner">
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--line"><span></span></i><span class="k-menu__link-text">Coca Cola CRM</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--line"><span></span></i><span class="k-menu__link-text">Delta Airlines Booking Site</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--line"><span></span></i><span class="k-menu__link-text">Malibu Accounting</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--line"><span></span></i><span class="k-menu__link-text">Vineseed Website Rewamp</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--line"><span></span></i><span class="k-menu__link-text">Zircon Mobile App</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--line"><span></span></i><span class="k-menu__link-text">Mercury CMS</span></a></li>
-														</ul>
-													</li>
-													<li class="k-menu__item ">
-														<h3 class="k-menu__heading k-menu__toggle"><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">HR Reports</span><i class="k-menu__ver-arrow la la-angle-right"></i></h3>
-														<ul class="k-menu__inner">
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Staff Directory</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Client Directory</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Salary Reports</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Staff Payslips</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Corporate Expenses</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Project Expenses</span></a></li>
-														</ul>
-													</li>
-													<li class="k-menu__item ">
-														<h3 class="k-menu__heading k-menu__toggle"><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Reporting Apps</span><i class="k-menu__ver-arrow la la-angle-right"></i></h3>
-														<ul class="k-menu__inner">
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Report Adjusments</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Sources & Mediums</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Reporting Settings</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Conversions</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Report Flows</span></a></li>
-															<li class="k-menu__item " data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link "><span class="k-menu__link-text">Audit & Logs</span></a></li>
-														</ul>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</li>
+
 									<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel" data-kmenu-submenu-toggle="click" data-kmenu-link-redirect="1" aria-haspopup="true"><a href="javascript:;" class="k-menu__link k-menu__toggle"><span class="k-menu__link-text">Apps</span><i class="k-menu__hor-arrow la la-angle-down"></i><i class="k-menu__ver-arrow la la-angle-right"></i></a>
 										<div class="k-menu__submenu k-menu__submenu--classic k-menu__submenu--left">
 											<ul class="k-menu__subnav">
@@ -395,11 +313,6 @@ License: You must have a valid license purchased only from https://themes.getboo
 						<div class="k-header__topbar">
 
 							<!--begin: Search -->
-							<div class="k-header__topbar-item k-header__topbar-item--search dropdown">
-								<div class="k-header__topbar-wrapper" id="k_offcanvas_toolbar_search_toggler_btn">
-									<span class="k-header__topbar-icon"><i class="flaticon2-search-1"></i></span>
-								</div>
-							</div>
 
 							<!--end: Search -->
 
@@ -578,44 +491,11 @@ License: You must have a valid license purchased only from https://themes.getboo
 							<!--end: Notifications -->
 
 							<!--begin: Quick actions -->
-							<div class="k-header__topbar-item dropdown">
-								<div class="k-header__topbar-wrapper" id="k_offcanvas_toolbar_quick_actions_toggler_btn">
-									<span class="k-header__topbar-icon"><i class="flaticon2-gear"></i></span>
-								</div>
-							</div>
+
 
 							<!--end: Quick actions -->
 
 							<!--begin: Language bar -->
-							<div class="k-header__topbar-item k-header__topbar-item--langs">
-								<div class="k-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px -2px">
-									<span class="k-header__topbar-icon">
-										<img class="" src="../assets/media/flags/020-flag.svg" alt="" />
-									</span>
-								</div>
-								<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround">
-									<ul class="k-nav k-margin-t-10 k-margin-b-10">
-										<li class="k-nav__item k-nav__item--active">
-											<a href="#" class="k-nav__link">
-												<span class="k-nav__link-icon"><img src="../assets/media/flags/020-flag.svg" alt="" /></span>
-												<span class="k-nav__link-text">English</span>
-											</a>
-										</li>
-										<li class="k-nav__item">
-											<a href="#" class="k-nav__link">
-												<span class="k-nav__link-icon"><img src="../assets/media/flags/016-spain.svg" alt="" /></span>
-												<span class="k-nav__link-text">Spanish</span>
-											</a>
-										</li>
-										<li class="k-nav__item">
-											<a href="#" class="k-nav__link">
-												<span class="k-nav__link-icon"><img src="../assets/media/flags/017-germany.svg" alt="" /></span>
-												<span class="k-nav__link-text">German</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
 
 							<!--end: Language bar -->
 
@@ -623,9 +503,9 @@ License: You must have a valid license purchased only from https://themes.getboo
 							<div class="k-header__topbar-item k-header__topbar-item--user">
 								<div class="k-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px -2px">
 									<div class="k-header__topbar-user">
-										<span class="k-header__topbar-welcome k-hidden-mobile">Hi,</span>
-										<span class="k-header__topbar-username k-hidden-mobile">Alex</span>
-										<img alt="Pic" src="../assets/media/users/300_25.jpg" />
+										<span class="k-header__topbar-welcome k-hidden-mobile">Bienvenido</span>
+										<span class="k-header__topbar-username k-hidden-mobile">@Administrador</span>
+
 
 										<!--use below badge element instead the user avatar to display username's first letter(remove k-hidden class to display it) -->
 										<span class="k-badge k-badge--username k-badge--lg k-badge--brand k-hidden">A</span>
@@ -638,8 +518,8 @@ License: You must have a valid license purchased only from https://themes.getboo
 												<img alt="Pic" src="../assets/media/users/300_21.jpg" />
 											</div>
 											<div class="k-user-card__details">
-												<div class="k-user-card__name">Alex Stone</div>
-												<div class="k-user-card__position">CTO, Loop Inc.</div>
+												<div class="k-user-card__name">Administrador</div>
+												<div class="k-user-card__position"></div>
 											</div>
 										</div>
 									</div>
@@ -647,29 +527,24 @@ License: You must have a valid license purchased only from https://themes.getboo
 										<li class="k-nav__item">
 											<a href="custom_user_profile-v1.html" class="k-nav__link">
 												<span class="k-nav__link-icon"><i class="flaticon2-calendar-3"></i></span>
-												<span class="k-nav__link-text">My Profile</span>
+												<span class="k-nav__link-text">Mi Perfil</span>
 											</a>
 										</li>
 										<li class="k-nav__item">
 											<a href="custom_user_profile-v1.html" class="k-nav__link">
 												<span class="k-nav__link-icon"><i class="flaticon2-browser-2"></i></span>
-												<span class="k-nav__link-text">My Tasks</span>
+												<span class="k-nav__link-text">Mis Tareas</span>
 											</a>
 										</li>
-										<li class="k-nav__item">
-											<a href="custom_user_profile-v1.html" class="k-nav__link">
-												<span class="k-nav__link-icon"><i class="flaticon2-mail"></i></span>
-												<span class="k-nav__link-text">Messages</span>
-											</a>
-										</li>
+
 										<li class="k-nav__item">
 											<a href="custom_user_profile-v1.html" class="k-nav__link">
 												<span class="k-nav__link-icon"><i class="flaticon2-gear"></i></span>
-												<span class="k-nav__link-text">Settings</span>
+												<span class="k-nav__link-text">Configiración</span>
 											</a>
 										</li>
 										<li class="k-nav__item k-nav__item--custom k-margin-t-15">
-											<a href="custom_user_login-v2.html" target="_blank" class="btn btn-outline-metal btn-hover-brand btn-upper btn-font-dark btn-sm btn-bold">Sign Out</a>
+											<a href="custom_user_login-v2.html" target="_blank" class="btn btn-outline-metal btn-hover-brand btn-upper btn-font-dark btn-sm btn-bold">Cerrar Sesión</a>
 										</li>
 									</ul>
 								</div>
@@ -678,11 +553,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 							<!--end: User bar -->
 
 							<!--begin: Quick panel toggler -->
-							<div class="k-header__topbar-item k-header__topbar-item--quick-panel" data-toggle="k-tooltip" title="Quick panel" data-placement="right">
-								<span class="k-header__topbar-icon" id="k_quick_panel_toggler_btn">
-									<i class="flaticon2-grids"></i>
-								</span>
-							</div>
+
 
 							<!--end: Quick panel toggler -->
 						</div>
@@ -697,18 +568,6 @@ License: You must have a valid license purchased only from https://themes.getboo
 
 						<!-- begin:: Content Head -->
 						<div class="k-content__head	k-grid__item">
-							<div class="k-content__head-main">
-								<h3 class="k-content__head-title">Dashboard</h3>
-								<div class="k-content__head-breadcrumbs">
-									<a href="#" class="k-content__head-breadcrumb-home"><i class="flaticon2-shelter"></i></a>
-									<span class="k-content__head-breadcrumb-separator"></span>
-									<a href="" class="k-content__head-breadcrumb-link">Dashboards</a>
-									<span class="k-content__head-breadcrumb-separator"></span>
-									<a href="" class="k-content__head-breadcrumb-link">Navy Aside</a>
-
-									<!-- <span class="k-content__head-breadcrumb-link k-content__head-breadcrumb-link--active">Active link</span> -->
-								</div>
-							</div>
 							<div class="k-content__head-toolbar">
 								<div class="k-content__head-wrapper">
 									<div class="dropdown dropdown-inline k-hide" data-toggle="k-tooltip" title="Quick actions" data-placement="left">
@@ -724,7 +583,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 										</div>
 									</div>
 									<a href="#" class="btn btn-sm btn-elevate btn-brand" id="k_dashboard_daterangepicker" data-toggle="k-tooltip" title="Select dashboard daterange" data-placement="left">
-										<span class="k-opacity-7" id="k_dashboard_daterangepicker_title">Today</span>&nbsp;
+										<span class="k-opacity-7" id="k_dashboard_daterangepicker_title">Fecha</span>&nbsp;
 										<span class="k-font-bold" id="k_dashboard_daterangepicker_date">Aug 16</span>
 										<i class="flaticon-calendar-with-a-clock-time-tools k-padding-l-5 k-padding-r-0"></i>
 									</a>
@@ -3348,17 +3207,6 @@ License: You must have a valid license purchased only from https://themes.getboo
 		<!-- end::Scrolltop -->
 
 		<!-- begin::Sticky Toolbar -->
-		<ul class="k-sticky-toolbar" style="margin-top: 30px;">
-			<li class="k-sticky-toolbar__item k-sticky-toolbar__item--demo-toggle" id="k_demo_panel_toggle" data-toggle="k-tooltip" title="Check out more demos" data-placement="right">
-				<a href="#" class="">Demos</a>
-			</li>
-			<li class="k-sticky-toolbar__item k-sticky-toolbar__item--builder" data-toggle="k-tooltip" title="Layout Builder" data-placement="left">
-				<a href="https://keenthemes.com/keen/preview/default/builder.html" target="_blank"><i class="flaticon2-box"></i></a>
-			</li>
-			<li class="k-sticky-toolbar__item k-sticky-toolbar__item--docs" data-toggle="k-tooltip" title="Documentation" data-placement="left">
-				<a href="https://keenthemes.com/keen/?page=docs" target="_blank"><i class="flaticon2-file"></i></a>
-			</li>
-		</ul>
 
 		<!-- end::Sticky Toolbar -->
 
