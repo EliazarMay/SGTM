@@ -149,7 +149,7 @@
 									<div class="k-menu__submenu "><span class="k-menu__arrow"></span>
 										<ul class="k-menu__subnav">
 											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Usuarios</span></span></li>
-											<li class="k-menu__item " aria-haspopup="true"><a href="custom_blog_grid.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Blog Grid</span></a></li>
+											<li class="k-menu__item " aria-haspopup="true"><a href="admin_usuarios.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Registro de Usuarios</span></a></li>
 										</ul>
 									</div>
 								</li>
