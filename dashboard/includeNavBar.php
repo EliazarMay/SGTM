@@ -4,11 +4,9 @@
 	<!-- begin::Head -->
 	<head>
 		<meta charset="utf-8" />
-		<title>Administrador | Tickets</title>
-		<meta name="description" content="Headers datatables examples">
+		<meta name="description" content="Latest updates and statistic charts">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
 		<!--begin::Web font -->
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
 		<script>
@@ -19,19 +17,13 @@
                 }
             });
         </script>
-
 		<!--end::Web font -->
-
 		<!--begin::Page Vendors Styles -->
-		<link href="../assets/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
-
+		<link href="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Page Vendors Styles -->
-
 		<!--begin:: Global Mandatory Vendors -->
 		<link href="../assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
-
 		<!--end:: Global Mandatory Vendors -->
-
 		<!--begin:: Global Optional Vendors -->
 		<link href="../assets/vendors/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
@@ -55,20 +47,15 @@
 		<link href="../assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/custom/vendors/fontawesome5/css/all.min.css" rel="stylesheet" type="text/css" />
-
 		<!--end:: Global Optional Vendors -->
-
 		<!--begin::Global Theme Styles -->
 		<link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
-
 		<!--end::Global Theme Styles -->
-
 		<!--begin::Layout Skins -->
 		<link href="../assets/demo/default/skins/header/base/light.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/demo/default/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/demo/default/skins/brand/navy.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/demo/default/skins/aside/navy.css" rel="stylesheet" type="text/css" />
-
 		<!--end::Layout Skins -->
 		<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 	</head>
@@ -83,8 +70,8 @@
 		<!-- begin:: Header Mobile -->
 		<div id="k_header_mobile" class="k-header-mobile  k-header-mobile--fixed ">
 			<div class="k-header-mobile__logo">
-				<a href="index.html">
-					<img alt="Logo" src="../assets/media/logos/logo-6.png" />
+				<a href="index.php">
+					<img alt="Logo" src="../assets/media/logos/image.png" />
 				</a>
 			</div>
 			<div class="k-header-mobile__toolbar">
@@ -175,8 +162,6 @@
 
 					<!-- end:: Aside Menu -->
 
-					<!-- begin:: Aside -->
-					<!-- end:: Aside -->
 				</div>
 
 				<!-- end:: Aside -->
@@ -189,10 +174,14 @@
 						<button class="k-header-menu-wrapper-close" id="k_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
 						<div class="k-header-menu-wrapper" id="k_header_menu_wrapper">
 							<div id="k_header_menu" class="k-header-menu k-header-menu-mobile ">
+								<ul class="k-menu__nav ">
+
+								</ul>
 							</div>
 						</div>
 
 						<!-- end: Header Menu -->
+
 						<!-- begin:: Header Topbar -->
 						<div class="k-header__topbar">
 
@@ -246,7 +235,13 @@
 									</ul>
 								</div>
 							</div>
+
 							<!--end: User bar -->
+
+							<!--begin: Quick panel toggler -->
+
+
+							<!--end: Quick panel toggler -->
 						</div>
 
 						<!-- end:: Header Topbar -->
@@ -257,109 +252,43 @@
 					<!-- begin:: Content -->
 					<div class="k-content	k-grid__item k-grid__item--fluid k-grid k-grid--hor" id="k_content">
 
-						<!-- begin:: Content Head -->
-						<div class="k-content__head	k-grid__item">
-							<div class="k-content__head-main">
-								<h3 class="k-content__head-title">Tickets</h3>
-								<div class="k-content__head-breadcrumbs">
-									<a href="#" class="k-content__head-breadcrumb-home"><i class="flaticon2-shelter"></i></a>
-								</div>
-							</div>
-						</div>
-
-						<!-- end:: Content Head -->
-
 						<!-- begin:: Content Body -->
 						<div class="k-content__body	k-grid__item k-grid__item--fluid" id="k_content_body">
-							<div class="k-portlet k-portlet--mobile">
-								<div class="k-portlet__head">
-									<div class="k-portlet__head-label">
-										<h3 class="k-portlet__head-title">
-											Lista de Tickets
-										</h3>
-									</div>
+
+							<!--begin::Dashboard 1-->
+
+							<!--begin::Row-->
+							<div class="row">
+                <!-- Tabla 1 -->
+								<div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1" style="border:#dddada 0.5px solid;">
+
 								</div>
-								<div class="k-portlet__body">
+                <!-- Tabla 2 -->
+								<div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1" style="border:#dddada 0.5px solid">
+                  <h1>Tabla 2</h1>
+								</div>
+                <!-- Tabla 3 -->
+								<div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1" style="border:#dddada 0.5px solid">
+                  <h1>Tabla 3</h1>
+								</div>
+							</div>
 
-									<!--begin: Datatable -->
-									<table class="table table-striped- table-bordered table-hover table-checkable" id="k_table_1">
-										<thead>
-											<tr>
+							<!--end::Row-->
+							<!-- Inicio tabla Mantenimiento -->
+							<!--begin::Row-->
+							<div class="row">
+								<div class="col-lg-12 col-xl-12 order-lg-3 order-xl-1" style="border:#dddada 0.5px solid">
 
-												<th>Folio</th>
-												<th>Laboratorio</th>
-												<th>Asunto</th>
-												<th>Correo</th>
-												<th>Prioridad</th>
-												<th>Fecha</th>
-												<th>Estatus</th>
-												<th>Ver</th>
-												<th>Eliminar</th>
-												<th>Acciones</th>
-												<th style="visibility:hidden;"></th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>1</td>
-												<td>Telématica</td>
-												<td>Actualización de word</td>
-												<td>Ameg@ucaribe.edu.mx</td>
-												<td>Alta</td>
-												<td>18/10/2021</td>
-												<td>Activo</td>
-												<td> <a href="#">Ver</a> </td>
-												<td> <a href="#">Eliminar</a> </td>
-												<td> <a href="#">Editar</a> </td>
-												<td style="visibility:hidden;" nowrap></td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>Lógistica</td>
-												<td>Actualización de word</td>
-												<td>Ameg@ucaribe.edu.mx</td>
-												<td>Alta</td>
-												<td>18/10/2021</td>
-												<td>Activo</td>
-												<td> <a href="#">Ver</a> </td>
-												<td> <a href="#">Eliminar</a> </td>
-												<td> <a href="#">Editar</a> </td>
-												<td style="visibility:hidden;" nowrap></td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td>Electrónica</td>
-												<td>Actualización de word</td>
-												<td>Ameg@ucaribe.edu.mx</td>
-												<td>Alta</td>
-												<td>18/10/2021</td>
-												<td>Activo</td>
-												<td> <a href="#">Ver</a> </td>
-												<td> <a href="#">Eliminar</a> </td>
-												<td> <a href="#">Editar</a> </td>
-												<td style="visibility:hidden;" nowrap></td>
-											</tr>
-											<tr>
-												<td>1</td>
-												<td>Simulación</td>
-												<td>Actualización de word</td>
-												<td>Ameg@ucaribe.edu.mx</td>
-												<td>Alta</td>
-												<td>18/10/2021</td>
-												<td>Activo</td>
-												<td> <a href="#">Ver</a> </td>
-												<td> <a href="#">Eliminar</a> </td>
-												<td> <a href="#">Editar</a> </td>
-												<td style="visibility:hidden;" nowrap></td>
-											</tr>
-										</tbody>
-									</table>
-									<!--end: Datatable -->
+									<!--begin::Portlet-->
+                  <h1>Tabla 4</h1>
+									<!--end::Portlet-->
 								</div>
 							</div>
 						</div>
+
 						<!-- end:: Content Body -->
 					</div>
+
 					<!-- end:: Content -->
 
 				</div>
@@ -368,31 +297,11 @@
 
 		<!-- end:: Page -->
 
-		<!-- begin:: Topbar Offcanvas Panels -->
-
-		<!-- begin::Offcanvas Toolbar Search -->
-
-		<!-- end::Offcanvas Toolbar Search -->
-
-		<!-- begin::Offcanvas Toolbar Quick Actions -->
-		<!-- end::Offcanvas Toolbar Quick Actions -->
-		<!-- end:: Topbar Offcanvas Panels -->
-
-		<!-- begin::Quick Panel -->
-		<!-- end::Quick Panel -->
 
 		<!-- begin::Scrolltop -->
 		<div id="k_scrolltop" class="k-scrolltop">
 			<i class="la la-arrow-up"></i>
 		</div>
-
-		<!-- end::Scrolltop -->
-
-		<!-- begin::Sticky Toolbar -->
-		<!-- end::Sticky Toolbar -->
-
-		<!-- begin::Demo Panel -->
-		<!-- end::Demo Panel -->
 
 		<!-- begin::Global Config -->
 		<script>
@@ -488,12 +397,12 @@
 		<!--end::Global Theme Bundle -->
 
 		<!--begin::Page Vendors -->
-		<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+		<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
 
 		<!--end::Page Vendors -->
 
 		<!--begin::Page Scripts -->
-		<script src="../assets/demo/default/custom/components/datatables/basic/headers.js" type="text/javascript"></script>
+		<script src="../assets/app/scripts/custom/dashboard.js" type="text/javascript"></script>
 
 		<!--end::Page Scripts -->
 

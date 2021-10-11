@@ -271,12 +271,6 @@
 
 						<!-- begin:: Content Body -->
 						<div class="k-content__body	k-grid__item k-grid__item--fluid" id="k_content_body">
-							<!--<div class="alert alert-light alert-elevate" role="alert">
-								<div class="alert-icon"><i class="flaticon-warning k-font-brand"></i></div>
-								<div class="alert-text">
-									DataTables fully supports colspan and rowspan in the table's header, assigning the required order listeners to the TH element suitable for that column.
-								</div> 
-							</div> -->
 							<div class="k-portlet k-portlet--mobile">
 								<div class="k-portlet__head">
 									<div class="k-portlet__head-label">
@@ -292,7 +286,7 @@
 										<thead>
 											<tr>
 												<th colspan="2">Información de registro</th>
-												<th colspan="3">Información de usuario</th>												
+												<th colspan="3">Información de usuario</th>
 											</tr>
 											<tr>
 												<th>ID Usuario</th>
@@ -341,22 +335,17 @@
 												<td> <a href="#">Editar</a> </td>
 												<td> <a href="#">Eliminar</a> </td>
 												<td nowrap></td>
-											</tr>																		
+											</tr>
 										</tbody>
 									</table>
-
 									<!--end: Datatable -->
 								</div>
 							</div>
 						</div>
-
 						<!-- end:: Content Body -->
 					</div>
-
 					<!-- end:: Content -->
 
-					<!-- begin:: Footer -->
-					<!-- end:: Footer -->
 				</div>
 			</div>
 		</div>

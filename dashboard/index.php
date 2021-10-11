@@ -4,11 +4,9 @@
 	<!-- begin::Head -->
 	<head>
 		<meta charset="utf-8" />
-		<title>Administrador | Dashboard</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
 		<!--begin::Web font -->
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
 		<script>
@@ -19,19 +17,13 @@
                 }
             });
         </script>
-
 		<!--end::Web font -->
-
 		<!--begin::Page Vendors Styles -->
 		<link href="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
-
 		<!--end::Page Vendors Styles -->
-
 		<!--begin:: Global Mandatory Vendors -->
 		<link href="../assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
-
 		<!--end:: Global Mandatory Vendors -->
-
 		<!--begin:: Global Optional Vendors -->
 		<link href="../assets/vendors/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
@@ -55,20 +47,15 @@
 		<link href="../assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/custom/vendors/fontawesome5/css/all.min.css" rel="stylesheet" type="text/css" />
-
 		<!--end:: Global Optional Vendors -->
-
 		<!--begin::Global Theme Styles -->
 		<link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
-
 		<!--end::Global Theme Styles -->
-
 		<!--begin::Layout Skins -->
 		<link href="../assets/demo/default/skins/header/base/light.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/demo/default/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/demo/default/skins/brand/navy.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/demo/default/skins/aside/navy.css" rel="stylesheet" type="text/css" />
-
 		<!--end::Layout Skins -->
 		<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 	</head>
@@ -399,106 +386,7 @@
 															</div>
 														</div>
 													</div>
-												</div>
-												<div class="tab-pane fade" id="k_portlet_tabs_1_2_content" role="tabpanel">
-													<div class="k-widget-5">
-														<div class="k-widget-5__item k-widget-5__item--brand">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Export Navitare booking table
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	01:20 PM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--danger">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Replace datatables rows color
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	12:00 AM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--brand">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Export Navitare booking table
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	01:20 PM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--danger">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Replace datatables rows color
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	12:00 AM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--success">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	NYCS internal discussion
-																</a>
-																<div class="k-widget-5__item-datetime ">
-																	03: 00 PM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check ">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--info ">
-															<div class="k-widget-5__item-info ">
-																<a href="#" class="k-widget-5__item-title">
-																	Management meeting
-																</a>
-																<div class="k-widget-5__item-datetime ">
-																	09:30 AM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check ">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-													</div>
+													<!-- Final de Solicitudes -->
 												</div>
 												<div class="tab-pane fade " id="k_portlet_tabs_1_3_content" role="tabpanel">
 													<div class="k-widget-5 ">
@@ -605,7 +493,7 @@
 									</div>
 								</div>
 								<div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1" style="border:#dddada 0.5px solid">
-
+									<!-- Inicio Estatus Tickets -->
 									<!--begin::Portlet-->
 									<div class="k-portlet k-portlet--height-fluid">
 										<div class="k-portlet__head  k-portlet__head--noborder">
@@ -657,7 +545,7 @@
 									<!--end::Portlet-->
 								</div>
 								<div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1" style="border:#dddada 0.5px solid">
-
+									<!-- Inicio Usuarios -->
 									<!--begin::Portlet-->
 									<div class="k-portlet k-portlet--height-fluid">
 										<div class="k-portlet__head">
@@ -747,13 +635,13 @@
 											</div>
 										</div>
 									</div>
-
+									<!-- Final Usuario -->
 									<!--end::Portlet-->
 								</div>
 							</div>
 
 							<!--end::Row-->
-
+							<!-- Inicio tabla Mantenimiento -->
 							<!--begin::Row-->
 							<div class="row">
 								<div class="col-lg-12 col-xl-12 order-lg-2 order-xl-1" style="border:#dddada 0.5px solid">
@@ -797,7 +685,7 @@
 									<!--end::Portlet-->
 								</div>
 							</div>
-
+							<!-- Final Mantenimiento -->
 							<!--end::Row-->
 
 							<!--end::Dashboard 1-->
