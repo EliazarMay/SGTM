@@ -168,6 +168,8 @@ CREATE TABLE `usuarios` (
   `nombre` varchar(32) NOT NULL,
   `apellido` varchar(32) NOT NULL,
   `correo` varchar(32) NOT NULL,
+  `password` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `fecha_reg` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `id_tipo_de_usuario` int(11) NOT NULL,
   `id_estatus_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

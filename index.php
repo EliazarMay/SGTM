@@ -27,7 +27,7 @@
 
         <div>
           <label for="password">Contraseña</label>
-          <input type="password" id="password" name="password" placeholder="contraseña">
+          <input type="password" id="password" name="password" placeholder="contraseña" pattern="[A-Za-z0-9]{1-15}">
         </div>
 
         <div>
