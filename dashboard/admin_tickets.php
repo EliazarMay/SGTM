@@ -1,3 +1,9 @@
+<?php
+include_once '../includes/conexion.php';
+$consulta = "SELECT * FROM tickets;";
+$tickets=$conexion->query($consulta);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -285,24 +291,60 @@
 									<table class="table table-striped- table-bordered table-hover table-checkable" id="k_table_1">
 										<thead>
 											<tr>
-
 												<th>Folio</th>
-												<th>Laboratorio</th>
 												<th>Asunto</th>
+												<th>Fecha</th>
+												<th>Solicitante</th>
 												<th>Correo</th>
 												<th>Prioridad</th>
-												<th>Fecha</th>
+												<th>Laboratorio</th>
+												<th>Descripcion</th>
 												<th>Estatus</th>
-												<th>Ver</th>
-												<th>Eliminar</th>
-												<th>Acciones</th>
 												<th style="visibility:hidden;"></th>
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<td>1</td>
-												<td>Telématica</td>
+											<?php
+
+						    						$conteo = 0;
+						    							foreach ($tickets as $ticket) {
+						                    $conteo = $conteo + 1;
+						    			?>
+						          <tr>
+						            <td>
+						              <?php echo $conteo; ?>
+						            </td>
+						            <td>
+						              <?php echo $ticket['asunto']; ?>
+						            </td>
+						            <td style="text-align: center">
+						              <?php echo $ticket['fecha_creacion']; ?>
+						            </td>
+						            <td style="text-align: center">
+						              <?php echo $ticket['nombre_solicitante']; ?>
+						            </td>
+						            <td style="text-align: center">
+						              <?php echo $ticket['correo']; ?>
+						            </td>
+						            <td style="text-align: center">
+						              <?php echo $ticket['id_prioridad']; ?>
+						            </td>
+						            <td style="text-align: center">
+						              <?php echo $ticket['id_laboratorio']; ?>
+						            </td>
+												<td style="text-align: center">
+													<?php echo $ticket['descripcion']; ?>
+												</td>
+												<td style="text-align: center">
+													<?php echo $ticket['id_estatus_ticket']; ?>
+												</td>
+												<td style="visibility:hidden;" nowrap>
+												</td>
+						          </tr>
+						          <?php
+						    					}
+												?>
+<!--
 												<td>Actualización de word</td>
 												<td>Ameg@ucaribe.edu.mx</td>
 												<td>Alta</td>
@@ -310,47 +352,8 @@
 												<td>Activo</td>
 												<td> <a href="#">Ver</a> </td>
 												<td> <a href="#">Eliminar</a> </td>
-												<td> <a href="#">Editar</a> </td>
-												<td style="visibility:hidden;" nowrap></td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>Lógistica</td>
-												<td>Actualización de word</td>
-												<td>Ameg@ucaribe.edu.mx</td>
-												<td>Alta</td>
-												<td>18/10/2021</td>
-												<td>Activo</td>
-												<td> <a href="#">Ver</a> </td>
-												<td> <a href="#">Eliminar</a> </td>
-												<td> <a href="#">Editar</a> </td>
-												<td style="visibility:hidden;" nowrap></td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td>Electrónica</td>
-												<td>Actualización de word</td>
-												<td>Ameg@ucaribe.edu.mx</td>
-												<td>Alta</td>
-												<td>18/10/2021</td>
-												<td>Activo</td>
-												<td> <a href="#">Ver</a> </td>
-												<td> <a href="#">Eliminar</a> </td>
-												<td> <a href="#">Editar</a> </td>
-												<td style="visibility:hidden;" nowrap></td>
-											</tr>
-											<tr>
-												<td>1</td>
-												<td>Simulación</td>
-												<td>Actualización de word</td>
-												<td>Ameg@ucaribe.edu.mx</td>
-												<td>Alta</td>
-												<td>18/10/2021</td>
-												<td>Activo</td>
-												<td> <a href="#">Ver</a> </td>
-												<td> <a href="#">Eliminar</a> </td>
-												<td> <a href="#">Editar</a> </td>
-												<td style="visibility:hidden;" nowrap></td>
+												<td> <a href="#">Editar</a> </td> -->
+
 											</tr>
 										</tbody>
 									</table>

@@ -276,6 +276,8 @@
 									<div class="k-portlet__head-label">
 										<h3 class="k-portlet__head-title">
 											Lista de usuarios
+											<br> <br>
+											<a href="#" class="btn btn-success">Nuevo Usuario</a>
 										</h3>
 									</div>
 								</div>

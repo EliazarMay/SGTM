@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-09-2021 a las 01:38:57
--- Versión del servidor: 10.4.20-MariaDB
--- Versión de PHP: 7.3.29
+-- Tiempo de generación: 18-10-2021 a las 06:48:34
+-- Versión del servidor: 10.4.17-MariaDB
+-- Versión de PHP: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,8 +40,17 @@ CREATE TABLE `estatus_mantenimientos` (
 
 CREATE TABLE `estatus_tickets` (
   `id_estatus_ticket` int(11) NOT NULL,
-  `estatus_ticket` int(11) NOT NULL
+  `estatus_ticket` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `estatus_tickets`
+--
+
+INSERT INTO `estatus_tickets` (`id_estatus_ticket`, `estatus_ticket`) VALUES
+(1, 'Sin Estatus'),
+(2, 'En Progreso'),
+(3, 'Rechazado');
 
 -- --------------------------------------------------------
 
@@ -114,7 +123,7 @@ CREATE TABLE `materiales_mantenimientos` (
 
 CREATE TABLE `prioridades` (
   `id_prioridad` int(11) NOT NULL,
-  `prioridad` int(11) NOT NULL
+  `prioridad` varchar(16) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -126,14 +135,26 @@ CREATE TABLE `prioridades` (
 CREATE TABLE `tickets` (
   `id_ticket` int(11) NOT NULL,
   `asunto` varchar(32) NOT NULL,
-  `descripcion` varchar(64) NOT NULL,
-  `fecha_creacion` date NOT NULL,
-  `id_estatus_ticket` int(11) NOT NULL,
+  `fecha_creacion` varchar(8) NOT NULL,
+  `nombre_solicitante` varchar(32) NOT NULL,
+  `correo` varchar(32) NOT NULL,
   `id_prioridad` int(11) NOT NULL,
   `id_laboratorio` int(11) NOT NULL,
-  `id_usuario_soporte` int(11) NOT NULL,
-  `archivo_adjunto` int(11) NOT NULL
+  `descripcion` text NOT NULL,
+  `id_estatus_ticket` int(11) NOT NULL,
+  `id_usuario_soporte` int(11) DEFAULT NULL,
+  `archivo_adjunto` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tickets`
+--
+
+INSERT INTO `tickets` (`id_ticket`, `asunto`, `fecha_creacion`, `nombre_solicitante`, `correo`, `id_prioridad`, `id_laboratorio`, `descripcion`, `id_estatus_ticket`, `id_usuario_soporte`, `archivo_adjunto`) VALUES
+(8, 'solicitud de material', '18/10/20', 'eliazar may manrique', '150300124@ucaribe.edu.mx', 0, 1, 'Me podrian apoyar con un cautin y estaño para una practica de la', 2, NULL, NULL),
+(10, 'Taladro no funciona', '18/10/20', 'Oscar Yama Martin', '150300804@uacribe.edu.mx', 0, 7, 'El día de hoy se observó que el talado del laboratorio no funciona', 2, NULL, NULL),
+(15, 'Taladro no funciona', '18/10/20', 'Oscar Yama Martin', '150300124@ucaribe.edu.mx', 1, 1, 'fgmjcfdxhfhgjc', 1, NULL, NULL),
+(16, 'asunto', '18/10/20', 't5h', '150300124@ucaribe.edu.mx', 1, 1, 'iujlyglyijkh', 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -168,8 +189,8 @@ CREATE TABLE `usuarios` (
   `nombre` varchar(32) NOT NULL,
   `apellido` varchar(32) NOT NULL,
   `correo` varchar(32) NOT NULL,
-  `password` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `fecha_reg` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `fecha_reg` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `id_tipo_de_usuario` int(11) NOT NULL,
   `id_estatus_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -250,7 +271,6 @@ ALTER TABLE `prioridades`
 ALTER TABLE `tickets`
   ADD PRIMARY KEY (`id_ticket`),
   ADD KEY `id_estatus_ticket` (`id_estatus_ticket`),
-  ADD KEY `id_prioridad` (`id_prioridad`,`id_laboratorio`,`id_usuario_soporte`),
   ADD KEY `id_laboratorio` (`id_laboratorio`),
   ADD KEY `id_usuario_soporte` (`id_usuario_soporte`);
 
@@ -294,7 +314,7 @@ ALTER TABLE `estatus_mantenimientos`
 -- AUTO_INCREMENT de la tabla `estatus_tickets`
 --
 ALTER TABLE `estatus_tickets`
-  MODIFY `id_estatus_ticket` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_estatus_ticket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `laboratorios`
@@ -315,10 +335,16 @@ ALTER TABLE `materiales`
   MODIFY `id_material` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `prioridades`
+--
+ALTER TABLE `prioridades`
+  MODIFY `id_prioridad` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `tickets`
 --
 ALTER TABLE `tickets`
-  MODIFY `id_ticket` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ticket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios_soportes`
@@ -329,6 +355,12 @@ ALTER TABLE `usuarios_soportes`
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `laboratorios`
+--
+ALTER TABLE `laboratorios`
+  ADD CONSTRAINT `laboratorios_ibfk_1` FOREIGN KEY (`id_laboratorio`) REFERENCES `tickets` (`id_laboratorio`);
 
 --
 -- Filtros para la tabla `mantenimientos`
@@ -346,15 +378,6 @@ ALTER TABLE `mantenimientos`
 ALTER TABLE `materiales_mantenimientos`
   ADD CONSTRAINT `materiales_mantenimientos_ibfk_1` FOREIGN KEY (`id_material`) REFERENCES `materiales` (`id_material`),
   ADD CONSTRAINT `materiales_mantenimientos_ibfk_2` FOREIGN KEY (`id_mantenimiento`) REFERENCES `mantenimientos` (`id_mantenimiento`);
-
---
--- Filtros para la tabla `tickets`
---
-ALTER TABLE `tickets`
-  ADD CONSTRAINT `tickets_ibfk_1` FOREIGN KEY (`id_estatus_ticket`) REFERENCES `estatus_tickets` (`id_estatus_ticket`),
-  ADD CONSTRAINT `tickets_ibfk_2` FOREIGN KEY (`id_prioridad`) REFERENCES `prioridades` (`id_prioridad`),
-  ADD CONSTRAINT `tickets_ibfk_3` FOREIGN KEY (`id_laboratorio`) REFERENCES `laboratorios` (`id_laboratorio`),
-  ADD CONSTRAINT `tickets_ibfk_4` FOREIGN KEY (`id_usuario_soporte`) REFERENCES `usuarios_soportes` (`id_usuario_soporte`);
 
 --
 -- Filtros para la tabla `usuarios`
