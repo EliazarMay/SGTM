@@ -1,3 +1,10 @@
+
+<?php
+include_once '../includes/conexion.php';
+$consulta = "SELECT * FROM usuarios;";
+$usuarios=$conexion->query($consulta);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -270,14 +277,56 @@
 						<!-- end:: Content Head -->
 
 						<!-- begin:: Content Body -->
+						<div class="k-portlet">
+									<div class="k-portlet__head">
+										<div class="k-portlet__head-label">
+											<h3 class="k-portlet__head-title">Añadir Usuarios</h3>
+										</div>
+									</div>
+
+									<!--begin::Form-->
+									<form class="k-form" action="metodos/NuevoUsuario.php" method="POST">
+										<div class="k-portlet__body">
+
+											<div class="form-group">
+												<label>Nombres</label>
+												<input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Nombres" name="Nombres">
+											</div>
+											<div class="form-group">
+												<label for="exampleInputPassword1">Apellidos</label>
+												<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Apellidos" name="Apellidos">
+											</div>
+											<div class="form-group">
+												<label>Correo</label>
+												<input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email" name="Email">
+											</div>
+											<div class="form-group">
+												<label for="exampleSelect1">Tipo de Usuario</label>
+												<select class="form-control" id="exampleSelect1" name="Id_tipo_de_usuario">
+													<option value="1">Administrador</option>
+													<option value="2">Responsable de Laboratorio</option>
+													<option value="3">Becario</option>
+												</select>
+											</div>
+											<input type="hidden" name="Id_estatus_usuario" value="Activo">
+											<input type="hidden" name="Password" value="Unicaribe">
+										</div>
+										<div class="k-portlet__foot">
+											<div class="k-form__actions">
+												<button type="submit" class="btn btn-primary">Enviar</button>
+											</div>
+										</div>
+									</form>
+
+									<!--end::Form-->
+								</div>
 						<div class="k-content__body	k-grid__item k-grid__item--fluid" id="k_content_body">
 							<div class="k-portlet k-portlet--mobile">
 								<div class="k-portlet__head">
 									<div class="k-portlet__head-label">
 										<h3 class="k-portlet__head-title">
 											Lista de usuarios
-											<br> <br>
-											<a href="#" class="btn btn-success">Nuevo Usuario</a>
+
 										</h3>
 									</div>
 								</div>
@@ -287,8 +336,6 @@
 									<table class="table table-striped- table-bordered table-hover table-checkable" id="k_table_1">
 										<thead>
 											<tr>
-												<th colspan="2">Información de registro</th>
-												<th colspan="3">Información de usuario</th>
 											</tr>
 											<tr>
 												<th>ID Usuario</th>
@@ -298,46 +345,43 @@
 												<th>Correo</th>
 												<th>Tipo de usuario</th>
 												<th>Estatus</th>
-												<th>Aciones</th>
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<td>1</td>
-												<td>24/12/2011</td>
-												<td>Alma Marcela</td>
-												<td>Escalante Grito</td>
-												<td>Ameg@ucaribe.edu.mx</td>
-												<td>Encargado</td>
-												<td>Activo</td>
-												<td> <a href="#">Editar</a> </td>
-												<td> <a href="#">Eliminar</a> </td>
-												<td nowrap></td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>29/01/2021</td>
-												<td>Gatillo</td>
-												<td>Moreno Alcocer</td>
-												<td>Gma@ucaribe.edu.mx</td>
-												<td>Becario</td>
-												<td>Inactivo</td>
-												<td> <a href="#">Editar</a> </td>
-												<td> <a href="#">Eliminar</a> </td>
-												<td nowrap></td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td>02/08/2019</td>
-												<td>Karina</td>
-												<td>Castillo Jimenez</td>
-												<td>Kcj@ucaribe.edu.mx</td>
-												<td>Administrador</td>
-												<td>Activo</td>
-												<td> <a href="#">Editar</a> </td>
-												<td> <a href="#">Eliminar</a> </td>
-												<td nowrap></td>
-											</tr>
+											<?php
+
+						    						$conteo = 0;
+						    							foreach ($usuarios as $usuario) {
+						                    $conteo = $conteo + 1;
+						    			?>
+						          <tr>
+						            <td>
+						              <?php echo $conteo; ?>
+						            </td>
+						            <td>
+						              <?php echo $usuario['fecha_reg']; ?>
+						            </td>
+						            <td style="text-align: center">
+						              <?php echo $usuario['nombre']; ?>
+						            </td>
+						            <td style="text-align: center">
+						              <?php echo $usuario['apellido']; ?>
+						            </td>
+						            <td style="text-align: center">
+						              <?php echo $usuario['correo']; ?>
+						            </td>
+						            <td style="text-align: center">
+						              <?php echo $usuario['id_tipo_de_usuario']; ?>
+						            </td>
+												<td style="text-align: center">
+													<?php echo $usuario['id_estatus_usuario']; ?>
+												</td>
+												<td nowrap>
+												</td>
+						          </tr>
+						          <?php
+						    					}
+												?>
 										</tbody>
 									</table>
 									<!--end: Datatable -->
