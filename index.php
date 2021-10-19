@@ -18,16 +18,16 @@
         <h2>Sistema de Gestión de Tickets y Mantenimientos</h2>
       </header>
 
-      <form action="dashboard" class="login__form" method="POST">
+      <form action="login.php" class="login__form" method="POST">
 
         <div>
           <label for="email">Usuario</label>
-          <input type="email" id="email" name="email" placeholder="@ucaribe.edu.mx">
+          <input type="email" id="mail" name="mail" placeholder="@ucaribe.edu.mx">
         </div>
 
         <div>
           <label for="password">Contraseña</label>
-          <input type="password" id="password" name="password" placeholder="contraseña" pattern="[A-Za-z0-9]{1-15}">
+          <input type="password" id="password" name="password" placeholder="contraseña">
         </div>
 
         <div>

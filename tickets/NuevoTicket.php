@@ -33,36 +33,27 @@
             <span class="details">Correo</span>
             <input name="Correo" nametype="text" placeholder="@ucaribe.edu.mx" required>
           </div>
-          <!-- <div class="input-box">
-            <span class="details">Tipo de Solicitud</span>
-            <select class="form-control" id="sel1" name="TipoSolicitud">
-              <option value="1">Solicitud de Materiales</option>
-              <option value="2">Solicitud de Laboratorio</option>
-              <option value="3">Soporte de equipos</option>
-              <option value="4">Soporte</option>
-            </select>
-          </div> -->
           <div class="input-box">
             <span class="details">Prioridad</span>
             <select class="form-control" id="sel2" name="Prioridad">
-              <option value="1">Baja</option>
-              <option value="2">Intermedia</option>
-              <option value="3">Alta</option>
+              <option value="Baja">Baja</option>
+              <option value="Intermedia">Intermedia</option>
+              <option value="Alta">Alta</option>
             </select>
           </div>
           <div class="input-box">
             <span class="details">Laboratorio</span>
             <select class="form-control" id="sel1" name="Laboratorio">
-              <option value="1">Laboratorio de Multimedia</option>
-              <option value="2">Laboratorio Telematica</option>
-              <option value="3">Laboratorio de Electronica y Harware</option>
-              <option value="4">Laboratorio de TIC</option>
-              <option value="5">Laboratorio de Logistica</option>
-              <option value="6">Laboratorio de Manufactura</option>
-              <option value="7">Laboratorio de Mécanica</option>
-              <option value="8">Laboratorio Tecnologías ambientales</option>
-              <option value="9">Laboratorio de Ingenieria de metodos y metrología</option>
-              <option value="10">Laboratorio de Energías Renovables</option>
+              <option value="Laboratorio de Multimedia">Laboratorio de Multimedia</option>
+              <option value="Laboratorio Telematica">Laboratorio Telematica</option>
+              <option value="Laboratorio de Electronica y Harware">Laboratorio de Electronica y Harware</option>
+              <option value="Laboratorio de TIC">Laboratorio de TIC</option>
+              <option value="Laboratorio de Logistica">Laboratorio de Logistica</option>
+              <option value="Laboratorio de Manufactura">Laboratorio de Manufactura</option>
+              <option value="Laboratorio de Mécanica">Laboratorio de Mécanica</option>
+              <option value="Laboratorio Tecnologías ambientales">Laboratorio Tecnologías ambientales</option>
+              <option value="Laboratorio de Ingenieria de metodos y metrología">Laboratorio de Ingenieria de metodos y metrología</option>
+              <option value="Laboratorio de Energías Renovables">Laboratorio de Energías Renovables</option>
 
             </select>
           </div>
