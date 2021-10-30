@@ -71,6 +71,7 @@ CREATE TABLE `estatus_usuarios` (
 
 CREATE TABLE `laboratorios` (
   `id_laboratorio` int(11) NOT NULL,
+  `fecha_reg` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `lasboratorio` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -100,6 +101,7 @@ CREATE TABLE `mantenimientos` (
 
 CREATE TABLE `materiales` (
   `id_material` int(11) NOT NULL,
+  `id_laboratorio` int(11) NOT NULL,
   `material` varchar(32) NOT NULL,
   `existencia` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

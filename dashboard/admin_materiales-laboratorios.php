@@ -1,13 +1,20 @@
+<?php
+include_once '../includes/conexion.php';
+$consulta = "SELECT * FROM laboratorios;";
+$laboratorios=$conexion->query($consulta);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 	<!-- begin::Head -->
 	<head>
 		<meta charset="utf-8" />
-		<title>Administrador | Tickets</title>
-		<meta name="description" content="Latest updates and statistic charts">
+		<title>Administrador | Materiales</title>
+		<meta name="description" content="Headers datatables examples">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
 		<!--begin::Web font -->
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
 		<script>
@@ -18,13 +25,19 @@
                 }
             });
         </script>
+
 		<!--end::Web font -->
+
 		<!--begin::Page Vendors Styles -->
-		<link href="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+
 		<!--end::Page Vendors Styles -->
+
 		<!--begin:: Global Mandatory Vendors -->
 		<link href="../assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+
 		<!--end:: Global Mandatory Vendors -->
+
 		<!--begin:: Global Optional Vendors -->
 		<link href="../assets/vendors/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
@@ -48,15 +61,20 @@
 		<link href="../assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/custom/vendors/fontawesome5/css/all.min.css" rel="stylesheet" type="text/css" />
+
 		<!--end:: Global Optional Vendors -->
+
 		<!--begin::Global Theme Styles -->
 		<link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+
 		<!--end::Global Theme Styles -->
+
 		<!--begin::Layout Skins -->
 		<link href="../assets/demo/default/skins/header/base/light.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/demo/default/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/demo/default/skins/brand/navy.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/demo/default/skins/aside/navy.css" rel="stylesheet" type="text/css" />
+
 		<!--end::Layout Skins -->
 		<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 	</head>
@@ -71,8 +89,8 @@
 		<!-- begin:: Header Mobile -->
 		<div id="k_header_mobile" class="k-header-mobile  k-header-mobile--fixed ">
 			<div class="k-header-mobile__logo">
-				<a href="index.php">
-					<img alt="Logo" src="../assets/media/logos/image.png" />
+				<a href="index.html">
+					<img alt="Logo" src="../assets/media/logos/logo-6.png" />
 				</a>
 			</div>
 			<div class="k-header-mobile__toolbar">
@@ -122,18 +140,12 @@
 									<div class="k-menu__submenu "><span class="k-menu__arrow"></span>
 										<ul class="k-menu__subnav">
 											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Mantenimiento</span></span></li>
-											<li class="k-menu__item  k-menu__item--active" aria-haspopup="true"><a href="index.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Nuevos</span></a></li>
+											<li class="k-menu__item  k-menu__item--active" aria-haspopup="true"><a href="index.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Nuevos</span></a></li>
 											<li class="k-menu__item " aria-haspopup="true"><a href="dashboards_brand-aside.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Estadisticas</span></a></li>
 											<li class="k-menu__item " aria-haspopup="true"><a href="dashboards_navy-header.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Reportes</span></a></li>
 										</ul>
 									</div>
 								</li>
-
-
-
-
-
-
 
 								<li class="k-menu__section ">
 									<h4 class="k-menu__section-text">Panel de Control</h4>
@@ -143,7 +155,7 @@
 									<div class="k-menu__submenu "><span class="k-menu__arrow"></span>
 										<ul class="k-menu__subnav">
 											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Usuarios</span></span></li>
-											<li class="k-menu__item " aria-haspopup="true"><a href="admin_usuarios.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Registro de usuarios</span></a></li>
+											<li class="k-menu__item " aria-haspopup="true"><a href="admin_usuarios.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Registro de Usuarios</span></a></li>
 										</ul>
 									</div>
 								</li>
@@ -169,6 +181,8 @@
 
 					<!-- end:: Aside Menu -->
 
+					<!-- begin:: Aside -->
+					<!-- end:: Aside -->
 				</div>
 
 				<!-- end:: Aside -->
@@ -181,14 +195,10 @@
 						<button class="k-header-menu-wrapper-close" id="k_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
 						<div class="k-header-menu-wrapper" id="k_header_menu_wrapper">
 							<div id="k_header_menu" class="k-header-menu k-header-menu-mobile ">
-								<ul class="k-menu__nav ">
-
-								</ul>
 							</div>
 						</div>
 
 						<!-- end: Header Menu -->
-
 						<!-- begin:: Header Topbar -->
 						<div class="k-header__topbar">
 
@@ -237,18 +247,12 @@
 											</a>
 										</li>
 										<li class="k-nav__item k-nav__item--custom k-margin-t-15">
-											<a href="../index.php" class="btn btn-outline-metal btn-hover-brand btn-upper btn-font-dark btn-sm btn-bold">Cerrar Sesión</a>
+											<a href="../index.html" class="btn btn-outline-metal btn-hover-brand btn-upper btn-font-dark btn-sm btn-bold">Cerrar Sesión</a>
 										</li>
 									</ul>
 								</div>
 							</div>
-
 							<!--end: User bar -->
-
-							<!--begin: Quick panel toggler -->
-
-
-							<!--end: Quick panel toggler -->
 						</div>
 
 						<!-- end:: Header Topbar -->
@@ -259,442 +263,83 @@
 					<!-- begin:: Content -->
 					<div class="k-content	k-grid__item k-grid__item--fluid k-grid k-grid--hor" id="k_content">
 
-						<!-- begin:: Content Body -->
-						<div class="k-content__body	k-grid__item k-grid__item--fluid" id="k_content_body">
-
-							<!--begin::Dashboard 1-->
-
-							<!--begin::Row-->
-							<div class="row">
-								<div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1" style="border:#dddada 0.5px solid;">
-
-									<!--begin::Portlet-->
-									<div class="k-portlet k-portlet--height-fluid k-portlet--tabs">
-										<div class="k-portlet__head">
-											<div class="k-portlet__head-label">
-												<h3 class="k-portlet__head-title">
-													Solicitudes
-												</h3>
-											</div>
-											<div class="k-portlet__head-toolbar">
-												<ul class="nav nav-tabs nav-tabs-line nav-tabs-line-brand nav-tabs-bold" role="tablist">
-													<li class="nav-item">
-														<a class="nav-link active show" data-toggle="tab" href="#k_portlet_tabs_1_1_content" role="tab" aria-selected="false">
-															Hoy
-														</a>
-													</li>
-												</ul>
-											</div>
-										</div>
-										<div class="k-portlet__body">
-											<div class="tab-content">
-												<div class="tab-pane fade active show" id="k_portlet_tabs_1_1_content" role="tabpanel">
-													<div class="k-widget-5">
-														<div class="k-widget-5__item k-widget-5__item--info">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Management meeting
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	09:30 AM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--danger">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Replace datatables rows color
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	12:00 AM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--brand">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Export Navitare booking table
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	01:20 PM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--success">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	NYCS internal discussion
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	03: 00 PM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--danger">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Project Launch
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	11: 00 AM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--success">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Server maintenance
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	4: 30 PM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-													</div>
-													<!-- Final de Solicitudes -->
-												</div>
-												<div class="tab-pane fade " id="k_portlet_tabs_1_3_content" role="tabpanel">
-													<div class="k-widget-5 ">
-														<div class="k-widget-5__item k-widget-5__item--success">
-															<div class="k-widget-5__item-info ">
-																<a href="#" class="k-widget-5__item-title">
-																	NYCS internal discussion
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	03: 00 PM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--danger">
-															<div class="k-widget-5__item-info ">
-																<a href="#" class="k-widget-5__item-title">
-																	Replace datatables rows color
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	12:00 AM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--danger">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Replace datatables rows color
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	12:00 AM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--brand">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Export Navitare booking table
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	01:20 PM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--brand">
-															<div class="k-widget-5__item-info ">
-																<a href="#" class="k-widget-5__item-title">
-																	Export Navitare booking table
-																</a>
-																<div class="k-widget-5__item-datetime ">
-																	01:20 PM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--info">
-															<div class="k-widget-5__item-info ">
-																<a href="#" class="k-widget-5__item-title">
-																	Management meeting
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	09:30 AM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1" style="border:#dddada 0.5px solid">
-									<!-- Inicio Estatus Tickets -->
-									<!--begin::Portlet-->
-									<div class="k-portlet k-portlet--height-fluid">
-										<div class="k-portlet__head  k-portlet__head--noborder">
-											<div class="k-portlet__head-label">
-												<h3 class="k-portlet__head-title">Estatus Tickets</h3>
-											</div>
-											<div class="k-portlet__head-toolbar">
-												<div class="k-portlet__head-toolbar-wrapper">
-														<div class="k-portlet__head-actions">
-															<a href="#" class="btn btn-default btn-sm btn-bold btn-upper">Ver Todos</a>
-														</div>
-												</div>
-											</div>
-										</div>
-										<div class="k-portlet__body k-portlet__body--fluid">
-											<div class="k-widget-21">
-												<div class="k-widget-21__title">
-													<div class="k-widget-21__label">Total: 800</div>
-													<img src="../assets/media/misc/iconbox_bg.png" class="k-widget-21__bg" alt="bg" />
-												</div>
-												<div class="k-widget-21__data">
-
-													<!--Doc: For the chart legend bullet colors can be changed with state helper classes: k-bg-success, k-bg-info, k-bg-danger. Refer: components/custom/colors.html -->
-													<div class="k-widget-21__legends">
-														<div class="k-widget-21__legend">
-															<i class="k-bg-brand"></i>
-															<span>ABIERTOS</span>
-														</div>
-														<div class="k-widget-21__legend">
-															<i class="k-shape-bg-color-4"></i>
-															<span>CERRADOS</span>
-														</div>
-														<div class="k-widget-21__legend">
-															<i class="k-shape-bg-color-3"></i>
-															<span>SIN ESTATUS</span>
-														</div>
-													</div>
-													<div class="k-widget-21__chart">
-														<div class="k-widget-21__stat">+37%</div>
-
-														<!--Doc: For the chart initialization refer to "widgetTechnologiesChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
-														<canvas id="k_widget_technologies_chart" style="height: 110px; width: 110px;"></canvas>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<!--end::Portlet-->
-								</div>
-								<div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1" style="border:#dddada 0.5px solid">
-									<!-- Inicio Usuarios -->
-									<!--begin::Portlet-->
-									<div class="k-portlet k-portlet--height-fluid">
-										<div class="k-portlet__head">
-											<div class="k-portlet__head-label">
-												<h3 class="k-portlet__head-title">Usuarios</h3>
-											</div>
-											<div class="k-portlet__head-toolbar">
-												<div class="k-portlet__head-actions">
-													<a href="#" class="btn btn-default btn-sm btn-bold btn-upper">Ver Todos</a>
-												</div>
-											</div>
-										</div>
-										<div class="k-portlet__body">
-											<div class="k-widget-4">
-												<div class="k-widget-4__item">
-													<div class="k-widget-4__item-content">
-														<div class="k-widget-4__item-section">
-															<div class="k-widget-4__item-pic">
-																<img class="" src="../assets/media/users/default.jpg" alt="" />
-															</div>
-															<div class="k-widget-4__item-info">
-																<a href="#" class="k-widget-4__item-username">Eliazar May</a>
-																<div class="k-widget-4__item-desc">Becario</div>
-															</div>
-														</div>
-													</div>
-													<div class="k-widget-4__item-content">
-														<div class="k-widget-4__item-price">
-															<span class="k-widget-4__item-number">Telématica</span>
-														</div>
-													</div>
-												</div>
-												<div class="k-widget-4__item">
-													<div class="k-widget-4__item-content">
-														<div class="k-widget-4__item-section">
-															<div class="k-widget-4__item-pic">
-																<img class="" src="../assets/media/users/default.jpg" alt="" />
-															</div>
-															<div class="k-widget-4__item-info">
-																<a href="#" class="k-widget-4__item-username">Yarely Baez</a>
-																<div class="k-widget-4__item-desc">Responsable de Laboratorios</div>
-															</div>
-														</div>
-													</div>
-													<div class="k-widget-4__item-content">
-														<div class="k-widget-4__item-price">
-															<span class="k-widget-4__item-number">Industrial</span>
-														</div>
-													</div>
-												</div>
-												<div class="k-widget-4__item">
-													<div class="k-widget-4__item-content">
-														<div class="k-widget-4__item-section">
-															<div class="k-widget-4__item-pic">
-																<img class="" src="../assets/media/users/default.jpg" alt="" />
-															</div>
-															<div class="k-widget-4__item-info">
-																<a href="#" class="k-widget-4__item-username">Oscar Yama</a>
-																<div class="k-widget-4__item-desc">Practicante</div>
-															</div>
-														</div>
-													</div>
-													<div class="k-widget-4__item-content">
-														<div class="k-widget-4__item-price">
-															<span class="k-widget-4__item-number">Lógistica</span>
-														</div>
-													</div>
-												</div>
-												<div class="k-widget-4__item">
-													<div class="k-widget-4__item-content">
-														<div class="k-widget-4__item-section">
-															<div class="k-widget-4__item-pic">
-																<img class="" src="../assets/media/users/default.jpg" alt="" />
-															</div>
-															<div class="k-widget-4__item-info">
-																<a href="#" class="k-widget-4__item-username">Giovanny Gil</a>
-																<div class="k-widget-4__item-desc">Profesor</div>
-															</div>
-														</div>
-													</div>
-													<div class="k-widget-4__item-content">
-														<div class="k-widget-4__item-price">
-															<span class="k-widget-4__item-number">Turismo</span>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- Final Usuario -->
-									<!--end::Portlet-->
+						<!-- begin:: Content Head -->
+						<div class="k-content__head	k-grid__item">
+							<div class="k-content__head-main">
+								<h3 class="k-content__head-title">Materiales</h3>
+								<div class="k-content__head-breadcrumbs">
+									<a href="#" class="k-content__head-breadcrumb-home"><i class="flaticon2-shelter"></i></a>
 								</div>
 							</div>
-
-							<!--end::Row-->
-							<!-- Inicio tabla Mantenimiento -->
-							<!--begin::Row-->
-							<div class="row">
-								<div class="col-lg-12 col-xl-12 order-lg-2 order-xl-1" style="border:#dddada 0.5px solid">
-
-								</div>
-
-								<div class="col-lg-12 col-xl-4 order-lg-2 order-xl-1">
-
-								</div>
-								<div class="col-lg-12 col-xl-12 order-lg-3 order-xl-1" style="border:#dddada 0.5px solid">
-
-									<!--begin::Portlet-->
-									<div class="k-portlet k-portlet--height-fluid">
-										<div class="k-portlet__head k-portlet__head--lg k-portlet__head--noborder k-portlet__head--break-sm">
-											<div class="k-portlet__head-label">
-												<h3 class="k-portlet__head-title">Mantenimientos</h3>
-											</div>
-											<div class="k-portlet__head-toolbar">
-												<div class="k-portlet__head-wrapper k-form">
-													<div class="k-form__group k-form__group--inline k-margin-r-10">
-														<div class="k-form__label">Ordenar Por:</div>
-														<div class="k-form__control" style="width: 160px;">
-															<select class="form-control bootstrap-select" id="k_form_status" title="Estatus">
-																<option value="1">Pendientes</option>
-																<option value="2">Realizados</option>
-																<option value="3">Próximos</option>
-															</select>
-														</div>
-													</div>
-													<a href="#" class="btn btn-brand btn-upper btn-bold">Nuevo Mantenimiento</a>
-												</div>
-											</div>
-										</div>
-										<div class="k-portlet__body k-portlet__body--fit">
-
-											<!--Doc: For the datatable initialization refer to "recentOrdersInit" function in "src\theme\app\scripts\custom\dashboard.js" -->
-											<div class="k-datatable" id="k_recent_orders"></div>
-										</div>
-									</div>
-
-									<!--end::Portlet-->
-								</div>
-							</div>
-							<!-- Final Mantenimiento -->
-							<!--end::Row-->
-
-							<!--end::Dashboard 1-->
 						</div>
 
+						<!-- end:: Content Head -->
+
+						<!-- begin:: Content Body -->
+						<div class="k-content__body	k-grid__item k-grid__item--fluid" id="k_content_body">
+							<div class="k-portlet k-portlet--mobile">
+								<div class="k-portlet__head">
+									<div class="k-portlet__head-label">
+										<h3 class="k-portlet__head-title">
+											Lista de laboratorios
+										</h3>
+									</div>
+								</div>
+								<div class="k-portlet__body">
+
+									<!--begin: Datatable -->
+									<table class="table table-striped- table-bordered table-hover table-checkable" id="k_table_1">
+										<thead>
+											<tr>
+											<th>ID Laboratorio</th>
+												<th>Fecha de registro</th>
+												<th>Laboratorio</th>
+												<th style="visibility:hidden;"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php
+
+						    						$conteo = 0;
+						    							foreach ($laboratorios as $laboratorio) {
+						                    $conteo = $conteo + 1;
+						    			?>
+						          <tr>
+								  <td>
+						              <?php echo $conteo; ?>
+						            </td>
+						            <td>
+						              <?php echo $laboratorio['fecha_reg']; ?>
+						            </td>
+						            <td style="text-align: center">
+						              <?php echo $laboratorio['lasboratorio']; ?>
+						            </td>
+									<td style="text-align: center">
+									<a href="admin_materiales.php" ><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span>Materiales</span></a>
+						            </td>
+						          </tr>
+						          <?php
+						    					}
+												?>
+<!--
+												<td>Actualización de word</td>
+												<td>Ameg@ucaribe.edu.mx</td>
+												<td>Alta</td>
+												<td>18/10/2021</td>
+												<td>Activo</td>
+												<td> <a href="#">Ver</a> </td>
+												<td> <a href="#">Eliminar</a> </td>
+												<td> <a href="#">Editar</a> </td> -->
+
+											</tr>
+										</tbody>
+									</table>
+									<!--end: Datatable -->
+								</div>
+							</div>
+						</div>
 						<!-- end:: Content Body -->
 					</div>
-
 					<!-- end:: Content -->
 
 				</div>
@@ -703,11 +348,31 @@
 
 		<!-- end:: Page -->
 
+		<!-- begin:: Topbar Offcanvas Panels -->
+
+		<!-- begin::Offcanvas Toolbar Search -->
+
+		<!-- end::Offcanvas Toolbar Search -->
+
+		<!-- begin::Offcanvas Toolbar Quick Actions -->
+		<!-- end::Offcanvas Toolbar Quick Actions -->
+		<!-- end:: Topbar Offcanvas Panels -->
+
+		<!-- begin::Quick Panel -->
+		<!-- end::Quick Panel -->
 
 		<!-- begin::Scrolltop -->
 		<div id="k_scrolltop" class="k-scrolltop">
 			<i class="la la-arrow-up"></i>
 		</div>
+
+		<!-- end::Scrolltop -->
+
+		<!-- begin::Sticky Toolbar -->
+		<!-- end::Sticky Toolbar -->
+
+		<!-- begin::Demo Panel -->
+		<!-- end::Demo Panel -->
 
 		<!-- begin::Global Config -->
 		<script>
@@ -803,12 +468,12 @@
 		<!--end::Global Theme Bundle -->
 
 		<!--begin::Page Vendors -->
-		<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+		<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 
 		<!--end::Page Vendors -->
 
 		<!--begin::Page Scripts -->
-		<script src="../assets/app/scripts/custom/dashboard.js" type="text/javascript"></script>
+		<script src="../assets/demo/default/custom/components/datatables/basic/headers.js" type="text/javascript"></script>
 
 		<!--end::Page Scripts -->
 
