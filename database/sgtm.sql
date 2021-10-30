@@ -101,7 +101,6 @@ CREATE TABLE `mantenimientos` (
 
 CREATE TABLE `materiales` (
   `id_material` int(11) NOT NULL,
-  `id_laboratorio` int(11) NOT NULL,
   `material` varchar(32) NOT NULL,
   `existencia` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

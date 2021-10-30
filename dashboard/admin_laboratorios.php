@@ -302,7 +302,7 @@ $laboratorios=$conexion->query($consulta);
 										</div>
 										<div class="k-portlet__foot">
 											<div class="k-form__actions">
-												<button type="submit" class="btn btn-primary">Enviar</button>
+												<button type="submit" class="btn btn-primary">Agregar</button>
 											</div>
 										</div>
 									</form>

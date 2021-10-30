@@ -1,8 +1,8 @@
 
 <?php
 include_once '../includes/conexion.php';
-$consulta = "SELECT * FROM usuarios;";
-$usuarios=$conexion->query($consulta);
+$consulta = "SELECT * FROM materiales;";
+$materiales=$conexion->query($consulta);
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ $usuarios=$conexion->query($consulta);
 	<!-- begin::Head -->
 	<head>
 		<meta charset="utf-8" />
-		<title>Administrador | Usuarios</title>
+		<title>Administrador | Materiales</title>
 		<meta name="description" content="Headers datatables examples">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -267,7 +267,7 @@ $usuarios=$conexion->query($consulta);
 						<!-- begin:: Content Head -->
 						<div class="k-content__head	k-grid__item">
 							<div class="k-content__head-main">
-								<h3 class="k-content__head-title">Usuarios</h3>
+								<h3 class="k-content__head-title">Materiales</h3>
 								<div class="k-content__head-breadcrumbs">
 									<a href="#" class="k-content__head-breadcrumb-home"><i class="flaticon2-shelter"></i></a>
 								</div>
@@ -280,36 +280,22 @@ $usuarios=$conexion->query($consulta);
 						<div class="k-portlet">
 									<div class="k-portlet__head">
 										<div class="k-portlet__head-label">
-											<h3 class="k-portlet__head-title">Añadir Usuarios</h3>
+											<h3 class="k-portlet__head-title">Añadir material</h3>
 										</div>
 									</div>
 
 									<!--begin::Form-->
-									<form class="k-form" action="metodos/NuevoUsuario.php" method="POST">
+									<form class="k-form" action="metodos/NuevoMaterial.php" method="POST">
 										<div class="k-portlet__body">
 
 											<div class="form-group">
-												<label>Nombres</label>
-												<input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Nombres" name="Nombres">
+												<label>Material</label>
+												<input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Material" name="NombreMaterial">
 											</div>
 											<div class="form-group">
-												<label for="exampleInputPassword1">Apellidos</label>
-												<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Apellidos" name="Apellidos">
+												<label>Cantidad</label>
+												<input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Cantidad de material" name="Existencias">
 											</div>
-											<div class="form-group">
-												<label>Correo</label>
-												<input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email" name="Email">
-											</div>
-											<div class="form-group">
-												<label for="exampleSelect1">Tipo de Usuario</label>
-												<select class="form-control" id="exampleSelect1" name="Id_tipo_de_usuario">
-													<option value="1">Administrador</option>
-													<option value="2">Responsable de Laboratorio</option>
-													<option value="3">Becario</option>
-												</select>
-											</div>
-											<input type="hidden" name="Id_estatus_usuario" value="Activo">
-											<input type="hidden" name="Password" value="Unicaribe">
 										</div>
 										<div class="k-portlet__foot">
 											<div class="k-form__actions">
@@ -325,7 +311,7 @@ $usuarios=$conexion->query($consulta);
 								<div class="k-portlet__head">
 									<div class="k-portlet__head-label">
 										<h3 class="k-portlet__head-title">
-											Lista de usuarios
+											Lista de materiales
 
 										</h3>
 									</div>
@@ -338,20 +324,16 @@ $usuarios=$conexion->query($consulta);
 											<tr>
 											</tr>
 											<tr>
-												<th>ID Usuario</th>
-												<th>Fecha de registro</th>
-												<th>Nombre</th>
-												<th>Apellidos</th>
-												<th>Correo</th>
-												<th>Tipo de usuario</th>
-												<th>Estatus</th>
+												<th>ID Material</th>
+												<th>Material</th>
+												<th>Existencia</th>
 											</tr>
 										</thead>
 										<tbody>
 											<?php
 
 						    						$conteo = 0;
-						    							foreach ($usuarios as $usuario) {
+						    							foreach ($materiales as $material) {
 						                    $conteo = $conteo + 1;
 						    			?>
 						          <tr>
@@ -359,25 +341,11 @@ $usuarios=$conexion->query($consulta);
 						              <?php echo $conteo; ?>
 						            </td>
 						            <td>
-						              <?php echo $usuario['fecha_reg']; ?>
+						              <?php echo $material['material']; ?>
 						            </td>
 						            <td style="text-align: center">
-						              <?php echo $usuario['nombre']; ?>
+						              <?php echo $material['existencia']; ?>
 						            </td>
-						            <td style="text-align: center">
-						              <?php echo $usuario['apellido']; ?>
-						            </td>
-						            <td style="text-align: center">
-						              <?php echo $usuario['correo']; ?>
-						            </td>
-						            <td style="text-align: center">
-						              <?php echo $usuario['id_tipo_de_usuario']; ?>
-						            </td>
-												<td style="text-align: center">
-													<?php echo $usuario['id_estatus_usuario']; ?>
-												</td>
-												<td nowrap>
-												</td>
 						          </tr>
 						          <?php
 						    					}
