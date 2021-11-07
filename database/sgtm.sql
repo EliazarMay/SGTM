@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-10-2021 a las 07:41:58
+-- Tiempo de generación: 07-11-2021 a las 18:58:43
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 7.3.27
 
@@ -60,8 +60,40 @@ INSERT INTO `estatus_tickets` (`id_estatus_ticket`, `estatus_ticket`) VALUES
 
 CREATE TABLE `estatus_usuarios` (
   `id_estatus_usuario` int(11) NOT NULL,
-  `estatus_usuario` int(11) NOT NULL
+  `estatus_usuario` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `estatus_usuarios`
+--
+
+INSERT INTO `estatus_usuarios` (`id_estatus_usuario`, `estatus_usuario`) VALUES
+(1, 'Activo'),
+(2, 'Inactivo');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `eventoscalendar`
+--
+
+CREATE TABLE `eventoscalendar` (
+  `id_mantenimientos` int(11) NOT NULL,
+  `evento` varchar(20) NOT NULL,
+  `color_evento` varchar(20) NOT NULL,
+  `fecha_inicio` varchar(20) NOT NULL,
+  `fecha_fin` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `eventoscalendar`
+--
+
+INSERT INTO `eventoscalendar` (`id_mantenimientos`, `evento`, `color_evento`, `fecha_inicio`, `fecha_fin`) VALUES
+(1, 'Prueba', '#FF5722', '2021-11-01', '2021-11-02'),
+(2, 'Prueba', '#FF5722', '2021-11-01', '2021-11-02'),
+(3, 'Prueba 2', '#2196F3', '2021-11-01', '2021-11-02'),
+(4, 'Prueba', '#FFC107', '2021-11-01', '2021-11-02');
 
 -- --------------------------------------------------------
 
@@ -72,7 +104,7 @@ CREATE TABLE `estatus_usuarios` (
 CREATE TABLE `laboratorios` (
   `id_laboratorio` int(11) NOT NULL,
   `fecha_reg` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `lasboratorio` varchar(11) NOT NULL
+  `laboratorio` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -162,8 +194,17 @@ INSERT INTO `tickets` (`id_ticket`, `asunto`, `fecha_creacion`, `nombre_solicita
 
 CREATE TABLE `tipos_de_usuarios` (
   `id_tipo_de_usuario` int(11) NOT NULL,
-  `tipo_de_usuario` int(11) NOT NULL
+  `tipo_de_usuario` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tipos_de_usuarios`
+--
+
+INSERT INTO `tipos_de_usuarios` (`id_tipo_de_usuario`, `tipo_de_usuario`) VALUES
+(1, 'Administrador'),
+(2, 'Responsable'),
+(3, 'Becario');
 
 -- --------------------------------------------------------
 
@@ -199,7 +240,8 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `correo`, `password`, `fecha_reg`, `id_tipo_de_usuario`, `id_estatus_usuario`) VALUES
 (1, 'Eliazar', 'May Manrique', '150300124@ucaribe.edu.mx', 'password', '18/10/2021', 1, 1),
-(4, 'Oscar Ricardo', 'Yama Martin', '150300804@ucaribe.edu.mx', 'Unicaribe', '19/10/2021', 1, 0);
+(4, 'Oscar Ricardo', 'Yama Martin', '150300804@ucaribe.edu.mx', 'Unicaribe', '19/10/2021', 1, 0),
+(5, 'Giovanny', 'Gil Guzman', '150300123@ucaribe.edu.mx', 'Unicaribe', '02/11/2021', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -234,6 +276,12 @@ ALTER TABLE `estatus_tickets`
 --
 ALTER TABLE `estatus_usuarios`
   ADD PRIMARY KEY (`id_estatus_usuario`);
+
+--
+-- Indices de la tabla `eventoscalendar`
+--
+ALTER TABLE `eventoscalendar`
+  ADD PRIMARY KEY (`id_mantenimientos`);
 
 --
 -- Indices de la tabla `laboratorios`
@@ -323,6 +371,18 @@ ALTER TABLE `estatus_tickets`
   MODIFY `id_estatus_ticket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT de la tabla `estatus_usuarios`
+--
+ALTER TABLE `estatus_usuarios`
+  MODIFY `id_estatus_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `eventoscalendar`
+--
+ALTER TABLE `eventoscalendar`
+  MODIFY `id_mantenimientos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT de la tabla `laboratorios`
 --
 ALTER TABLE `laboratorios`
@@ -353,10 +413,16 @@ ALTER TABLE `tickets`
   MODIFY `id_ticket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
+-- AUTO_INCREMENT de la tabla `tipos_de_usuarios`
+--
+ALTER TABLE `tipos_de_usuarios`
+  MODIFY `id_tipo_de_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios_soportes`
