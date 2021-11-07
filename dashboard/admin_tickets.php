@@ -300,6 +300,7 @@ $tickets=$conexion->query($consulta);
 												<th>Laboratorio</th>
 												<th>Descripcion</th>
 												<th>Estatus</th>
+												<th>Ver</th>
 												<th style="visibility:hidden;"></th>
 											</tr>
 										</thead>
@@ -337,6 +338,9 @@ $tickets=$conexion->query($consulta);
 												</td>
 												<td style="text-align: center">
 													<?php echo $ticket['id_estatus_ticket']; ?>
+												</td>
+												<td style="text-align: center">
+													<a href="admin_info_tickets.php?<?php echo $ticket['id_ticket']; ?>">Ver</a>
 												</td>
 												<td style="visibility:hidden;" nowrap>
 												</td>

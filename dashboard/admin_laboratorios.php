@@ -348,7 +348,7 @@ $laboratorios=$conexion->query($consulta);
 						            </td>
 						            <td style="text-align: center">
 						              <?php echo $laboratorio['lasboratorio']; ?>
-						            </td>			
+						            </td>
 									<td nowrap>
 									</td>
 						          </tr>

@@ -521,7 +521,7 @@ function flexibleCompare(a, b) {
 exports.flexibleCompare = flexibleCompare;
 /* Date Utilities
 ----------------------------------------------------------------------------------------------------------------------*/
-exports.dayIDs = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+exports.dayIDs = ['Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab', 'Dom'];
 exports.unitsDesc = ['year', 'month', 'week', 'day', 'hour', 'minute', 'second', 'millisecond']; // descending
 // Diffs the two moments into a Duration where full-days are recorded first, then the remaining time.
 // Moments will have their timezones normalized.
@@ -2663,7 +2663,7 @@ function getMomentLocaleData(localeCode) {
 exports.getMomentLocaleData = getMomentLocaleData;
 // Initialize English by forcing computation of moment-derived options.
 // Also, sets it as the default.
-locale('en', options_1.englishDefaults);
+locale('es', options_1.spanishDefaults);
 
 
 /***/ }),
@@ -2713,11 +2713,11 @@ exports.globalDefaults = {
         next: 'next',
         prevYear: 'prev year',
         nextYear: 'next year',
-        year: 'year',
-        today: 'today',
-        month: 'month',
-        week: 'week',
-        day: 'day'
+        year: 'Año',
+        today: 'Hoy',
+        month: 'Mes',
+        week: 'Semana',
+        day: 'Día'
     },
     // buttonIcons: null,
     allDayText: 'all-day',
@@ -3885,7 +3885,7 @@ var View = /** @class */ (function (_super) {
         if (dateMutation) {
             eventInstance.dateProfile = dateMutation.buildNewDateProfile(eventInstance.dateProfile, this.calendar);
         }
-        this.triggerEventDrop(eventInstance, 
+        this.triggerEventDrop(eventInstance,
         // a drop doesn't necessarily mean a date mutation (ex: resource change)
         (dateMutation && dateMutation.dateDelta) || moment.duration(), undoFunc, el, ev);
     };
@@ -4585,8 +4585,8 @@ moment_ext_1.newMomentProto.toISOString = function () {
     return moment_ext_1.oldMomentProto.toISOString.apply(this, arguments);
 };
 function englishMoment(mom) {
-    if (mom.locale() !== 'en') {
-        return mom.clone().locale('en');
+    if (mom.locale() !== 'es') {
+        return mom.clone().locale('es');
     }
     return mom;
 }

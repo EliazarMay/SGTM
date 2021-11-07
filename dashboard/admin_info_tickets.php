@@ -1,11 +1,4 @@
 
-<?php
-include_once '../includes/conexion.php';
-$consulta = "SELECT * FROM usuarios INNER JOIN tipos_de_usuarios ON
-						 usuarios.id_tipo_de_usuario = tipos_de_usuarios.id_tipo_de_usuario;";
-$usuarios=$conexion->query($consulta);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -268,7 +261,7 @@ $usuarios=$conexion->query($consulta);
 						<!-- begin:: Content Head -->
 						<div class="k-content__head	k-grid__item">
 							<div class="k-content__head-main">
-								<h3 class="k-content__head-title">Usuarios</h3>
+								<h3 class="k-content__head-title">Tickets</h3>
 								<div class="k-content__head-breadcrumbs">
 									<a href="#" class="k-content__head-breadcrumb-home"><i class="flaticon2-shelter"></i></a>
 								</div>
@@ -278,113 +271,139 @@ $usuarios=$conexion->query($consulta);
 						<!-- end:: Content Head -->
 
 						<!-- begin:: Content Body -->
-						<div class="k-portlet">
-									<div class="k-portlet__head">
-										<div class="k-portlet__head-label">
-											<h3 class="k-portlet__head-title">Añadir Usuarios</h3>
-										</div>
-									</div>
+            <div class="k-content__body	k-grid__item k-grid__item--fluid" id="k_content_body">
+              <div class="row">
+                <div class="col-md-6">
 
-									<!--begin::Form-->
-									<form class="k-form" action="metodos/NuevoUsuario.php" method="POST">
-										<div class="k-portlet__body">
+                  <!--begin::Portlet-->
+                  <div class="k-portlet">
+                    <div class="k-portlet__head">
+                      <div class="k-portlet__head-label">
+                        <h3 class="k-portlet__head-title">Información de la solicitud</h3>
+                      </div>
+                    </div>
 
-											<div class="form-group">
-												<label>Nombres</label>
-												<input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Nombres" name="Nombres">
-											</div>
-											<div class="form-group">
-												<label for="exampleInputPassword1">Apellidos</label>
-												<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Apellidos" name="Apellidos">
-											</div>
-											<div class="form-group">
-												<label>Correo</label>
-												<input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email" name="Email">
-											</div>
-											<div class="form-group">
-												<label for="exampleSelect1">Tipo de Usuario</label>
-												<select class="form-control" id="exampleSelect1" name="Id_tipo_de_usuario">
-													<option value="1">Administrador</option>
-													<option value="2">Responsable de Laboratorio</option>
-													<option value="3">Becario</option>
-												</select>
-											</div>
-											<input type="hidden" name="Id_estatus_usuario" value="Activo">
-											<input type="hidden" name="Password" value="Unicaribe">
-										</div>
-										<div class="k-portlet__foot">
-											<div class="k-form__actions">
-												<button type="submit" class="btn btn-primary">Agregar</button>
-											</div>
-										</div>
-									</form>
+                    <!--begin::Form-->
+                    <form class="k-form">
+                      <div class="k-portlet__body">
+                        <div class="form-group form-group-last">
+                        </div>
+                        <div class="form-group">
+                          <label>Correo</label>
+                          <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="150300123@ucaribe.edu.mx" disabled="disabled">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Fecha</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="<?php echo date("F j, Y, g:i a"); ?>" disabled="disabled">
+                        </div>
+                        <div class="form-group">
+                          <label>Nombre</label>
+                          <p class="form-control-static" disabled="disabled">Gil Guzman Giovanny</p>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleSelect1">Asunto</label>
+                          <select class="form-control" id="exampleSelect1">
+                            <option>Software</option>
+                            <option>Hardware</option>
+                            <option>Sistemas de Información</option>
+                            <option>Cambio de componente</option>
+                            <option>Prestamo</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleSelect1">Lsboratorio</label>
+                          <select class="form-control" id="exampleSelect1">
+                            <option>LHC</option>
+                            <option>Telemática</option>
+                            <option>Mécanica</option>
+                            <option>Lógistca</option>
+                            <option>Multimedia</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleSelect2">Prioridad</label>
+                          <select multiple="" class="form-control" id="exampleSelect2">
+                            <option>Alta</option>
+                            <option>Media</option>
+                            <option>Baja</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleSelect2">Archivo adjunto</label>
+                          <br>
+                          <button type="button" class="btn btn-outline-brand btn-elevate btn-pill"><i class="flaticon-file-1">Ver</i></button>
 
-									<!--end::Form-->
-								</div>
-						<div class="k-content__body	k-grid__item k-grid__item--fluid" id="k_content_body">
-							<div class="k-portlet k-portlet--mobile">
-								<div class="k-portlet__head">
-									<div class="k-portlet__head-label">
-										<h3 class="k-portlet__head-title">
-											Lista de usuarios
+                        </div>
+                        <div class="form-group form-group-last">
+                          <label for="exampleTextarea">Descripción</label>
+                          <textarea class="form-control" id="exampleTextarea" rows="3" disabled="disabled">Prueba de sistema</textarea>
+                        </div>
+                      </div>
+                      <div class="k-portlet__foot">
+                        <div class="k-form__actions">
+                          <button type="reset" class="btn btn-primary">Envíar</button>
+                          <button type="reset" class="btn btn-secondary">Cancelar</button>
+                        </div>
+                      </div>
+                    </form>
 
-										</h3>
-									</div>
-								</div>
-								<div class="k-portlet__body">
+                    <!--end::Form-->
+                  </div>
 
-									<!--begin: Datatable -->
-									<table class="table table-striped- table-bordered table-hover table-checkable" id="k_table_1">
-										<thead>
-											<tr>
-											</tr>
-											<tr>
-												<th>ID Usuario</th>
-												<th>Fecha de registro</th>
-												<th>Nombre</th>
-												<th>Apellidos</th>
-												<th>Correo</th>
-												<th>Tipo de usuario</th>
-												<th>Estatus</th>
-											</tr>
-										</thead>
-										<tbody>
-											<?php
+                  <!--end::Portlet-->
 
-						    						$conteo = 0;
-						    							foreach ($usuarios as $usuario) {
-						                    $conteo = $conteo + 1;
-						    			?>
-						          <tr>
-						            <td>
-						              <?php echo $conteo; ?>
-						            </td>
-						            <td>
-						              <?php echo $usuario['fecha_reg']; ?>
-						            </td>
-						            <td style="text-align: center">
-						              <?php echo $usuario['nombre']; ?>
-						            </td>
-						            <td style="text-align: center">
-						              <?php echo $usuario['apellido']; ?>
-						            </td>
-						            <td style="text-align: center">
-						              <?php echo $usuario['correo']; ?>
-						            </td>
-						            <td style="text-align: center">
-						              <?php echo $usuario['tipo_de_usuario']; ?>
-						            </td>
-												<td style="text-align: center">
-													<?php echo $usuario['id_estatus_usuario']; ?>
-												</td>
-												<td nowrap>
-												</td>
-						          </tr>
-						          <?php
-						    					}
-												?>
-										</tbody>
-									</table>
+                  <!--begin::Portlet-->
+
+                  <!--end::Portlet-->
+                </div>
+                <div class="col-md-6">
+
+                  <!--begin::Portlet-->
+                  <div class="k-portlet">
+                    <div class="k-portlet__head">
+                      <div class="k-portlet__head-label">
+                        <h3 class="k-portlet__head-title">Respuesta</h3>
+                      </div>
+                    </div>
+
+                    <!--begin::Form-->
+                    <form class="k-form">
+                      <div class="k-portlet__body">
+                        <div class="form-group">
+                          <label>Estatus</label>
+                          <select class="form-control">
+                            <option>Pendiente</option>
+                            <option>Resuelto</option>
+                            <option>Cerrado</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label>Asignado a:</label>
+                          <select class="form-control">
+                            <option>Eliazar May</option>
+                            <option>Giovanny Gil</option>
+                            <option>Oscar Yama</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleTextarea">Descripción</label>
+                          <textarea class="form-control" rows="3" placeholder="Descripción de la solicitud"></textarea>
+                        </div>
+                      </div>
+                      <div class="k-portlet__foot">
+                        <div class="k-form__actions">
+                          <button type="reset" class="btn btn-brand">Envíar</button>
+                          <button type="reset" class="btn btn-secondary">Cancelar</button>
+                        </div>
+                      </div>
+                    </form>
+
+                    <!--end::Form-->
+                  </div>
+                </div>
+              </div>
+            </div>
+
 									<!--end: Datatable -->
 								</div>
 							</div>

@@ -7,7 +7,7 @@
 
     $Fechareg = date("d/m/Y");
 		$sentencia="INSERT INTO
-								Laboratorios (lasboratorio, fecha_reg)
+								Laboratorios (laboratorio, fecha_reg)
         				VALUES ('".$NombreLaboratorio."','".$Fechareg."')";
 
 		$conexion->query($sentencia) or die ("Error al agregar laboratorio: ".mysqli_error($conexion));
