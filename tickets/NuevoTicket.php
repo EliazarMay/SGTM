@@ -19,7 +19,13 @@
         <div class="user-details">
           <div class="input-box">
             <span class="details">Asunto</span>
-            <input name="Asunto" type="text" placeholder="" required>
+            <select class="form-control" name="Asunto">
+              <option value="Reporte de incidencia">Reporte de incidencia</option>
+              <option value="Prestamo de materiales">Prestamo de materiales</option>
+              <option value="Solicitud instalación de Software">Solicitud instalación de Software</option>
+              <option value="Prestamos de equiposC">Prestamos de equipos</option>
+              <option value="">Otros</option>
+            </select>
           </div>
           <div class="input-box">
             <span class="details">Fecha</span>

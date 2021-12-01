@@ -312,7 +312,7 @@ $laboratorios=$conexion->query($consulta);
 						              <?php echo $laboratorio['fecha_reg']; ?>
 						            </td>
 						            <td style="text-align: center">
-						              <?php echo $laboratorio['lasboratorio']; ?>
+						              <?php echo $laboratorio['laboratorio']; ?>
 						            </td>
 									<td style="text-align: center">
 									<a href="admin_materiales.php" ><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span>Materiales</span></a>

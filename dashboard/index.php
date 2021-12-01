@@ -293,7 +293,7 @@
 														<div class="k-widget-5__item k-widget-5__item--info">
 															<div class="k-widget-5__item-info">
 																<a href="#" class="k-widget-5__item-title">
-																	Management meeting
+																	Taladro no funciona
 																</a>
 																<div class="k-widget-5__item-datetime">
 																	09:30 AM
@@ -309,7 +309,7 @@
 														<div class="k-widget-5__item k-widget-5__item--danger">
 															<div class="k-widget-5__item-info">
 																<a href="#" class="k-widget-5__item-title">
-																	Replace datatables rows color
+																	Reporte de incidencias
 																</a>
 																<div class="k-widget-5__item-datetime">
 																	12:00 AM
@@ -322,58 +322,10 @@
 																</label>
 															</div>
 														</div>
-														<div class="k-widget-5__item k-widget-5__item--brand">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Export Navitare booking table
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	01:20 PM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
 														<div class="k-widget-5__item k-widget-5__item--success">
 															<div class="k-widget-5__item-info">
 																<a href="#" class="k-widget-5__item-title">
-																	NYCS internal discussion
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	03: 00 PM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--danger">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Project Launch
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	11: 00 AM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--success">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Server maintenance
+																	Prestamo de materiales
 																</a>
 																<div class="k-widget-5__item-datetime">
 																	4: 30 PM
@@ -512,7 +464,7 @@
 										<div class="k-portlet__body k-portlet__body--fluid">
 											<div class="k-widget-21">
 												<div class="k-widget-21__title">
-													<div class="k-widget-21__label">Total: 800</div>
+													<div class="k-widget-21__label">Total: 2</div>
 													<img src="../assets/media/misc/iconbox_bg.png" class="k-widget-21__bg" alt="bg" />
 												</div>
 												<div class="k-widget-21__data">
@@ -533,7 +485,7 @@
 														</div>
 													</div>
 													<div class="k-widget-21__chart">
-														<div class="k-widget-21__stat">+37%</div>
+														<div class="k-widget-21__stat">100%</div>
 
 														<!--Doc: For the chart initialization refer to "widgetTechnologiesChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
 														<canvas id="k_widget_technologies_chart" style="height: 110px; width: 110px;"></canvas>

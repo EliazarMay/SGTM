@@ -2,7 +2,8 @@
 <?php
 include_once '../includes/conexion.php';
 $consulta = "SELECT * FROM usuarios INNER JOIN tipos_de_usuarios ON
-						 usuarios.id_tipo_de_usuario = tipos_de_usuarios.id_tipo_de_usuario;";
+usuarios.id_tipo_de_usuario = tipos_de_usuarios.id_tipo_de_usuario
+INNER JOIN estatus_usuarios ON usuarios.id_estatus_usuario = estatus_usuarios.id_estatus_usuario;";
 $usuarios=$conexion->query($consulta);
 ?>
 
@@ -91,7 +92,7 @@ $usuarios=$conexion->query($consulta);
 		<!-- begin:: Header Mobile -->
 		<div id="k_header_mobile" class="k-header-mobile  k-header-mobile--fixed ">
 			<div class="k-header-mobile__logo">
-				<a href="index.html">
+				<a href="index.php">
 					<img alt="Logo" src="../assets/media/logos/logo-6.png" />
 				</a>
 			</div>
@@ -142,7 +143,7 @@ $usuarios=$conexion->query($consulta);
 									<div class="k-menu__submenu "><span class="k-menu__arrow"></span>
 										<ul class="k-menu__subnav">
 											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Mantenimiento</span></span></li>
-											<li class="k-menu__item  k-menu__item--active" aria-haspopup="true"><a href="index.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Nuevos</span></a></li>
+											<li class="k-menu__item  k-menu__item--active" aria-haspopup="true"><a href="index.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Nuevos</span></a></li>
 											<li class="k-menu__item " aria-haspopup="true"><a href="dashboards_brand-aside.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Estadisticas</span></a></li>
 											<li class="k-menu__item " aria-haspopup="true"><a href="dashboards_navy-header.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Reportes</span></a></li>
 										</ul>
@@ -249,7 +250,7 @@ $usuarios=$conexion->query($consulta);
 											</a>
 										</li>
 										<li class="k-nav__item k-nav__item--custom k-margin-t-15">
-											<a href="../index.html" class="btn btn-outline-metal btn-hover-brand btn-upper btn-font-dark btn-sm btn-bold">Cerrar Sesión</a>
+											<a href="../index.php" class="btn btn-outline-metal btn-hover-brand btn-upper btn-font-dark btn-sm btn-bold">Cerrar Sesión</a>
 										</li>
 									</ul>
 								</div>
@@ -375,7 +376,7 @@ $usuarios=$conexion->query($consulta);
 						              <?php echo $usuario['tipo_de_usuario']; ?>
 						            </td>
 												<td style="text-align: center">
-													<?php echo $usuario['id_estatus_usuario']; ?>
+													<?php echo $usuario['estatus_usuario']; ?>
 												</td>
 												<td nowrap>
 												</td>
