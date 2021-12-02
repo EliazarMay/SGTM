@@ -545,9 +545,7 @@ $tickets=$conexion->query($consulta);
 														</div>
 													</div>
 													<div class="k-widget-4__item-content">
-														<div class="k-widget-4__item-price">
-															<span class="k-widget-4__item-number">Telématica</span>
-														</div>
+
 													</div>
 												</div>
 												<div class="k-widget-4__item">
@@ -563,9 +561,7 @@ $tickets=$conexion->query($consulta);
 														</div>
 													</div>
 													<div class="k-widget-4__item-content">
-														<div class="k-widget-4__item-price">
-															<span class="k-widget-4__item-number">Industrial</span>
-														</div>
+
 													</div>
 												</div>
 												<div class="k-widget-4__item">
@@ -581,9 +577,7 @@ $tickets=$conexion->query($consulta);
 														</div>
 													</div>
 													<div class="k-widget-4__item-content">
-														<div class="k-widget-4__item-price">
-															<span class="k-widget-4__item-number">Lógistica</span>
-														</div>
+
 													</div>
 												</div>
 												<div class="k-widget-4__item">
@@ -599,9 +593,6 @@ $tickets=$conexion->query($consulta);
 														</div>
 													</div>
 													<div class="k-widget-4__item-content">
-														<div class="k-widget-4__item-price">
-															<span class="k-widget-4__item-number">Turismo</span>
-														</div>
 													</div>
 												</div>
 											</div>
