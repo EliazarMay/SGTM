@@ -1,20 +1,38 @@
 <?php
 include_once '../includes/conexion.php';
+// Consulta tickets abiertos
+$activos="SELECT COUNT(*) as total FROM tickets WHERE id_estatus_ticket = 1;";
+$resultado_activos=mysqli_query($conexion,$activos);
+$datos_activos=mysqli_fetch_assoc($resultado_activos);
+// echo $datos_activos['total'];
+
+// Copnsulta tickets cerrados
+$cerrados="SELECT COUNT(*) as cerrados FROM tickets WHERE id_estatus_ticket = 2;";
+$resultado_cerrados=mysqli_query($conexion,$cerrados);
+$datos_cerrados=mysqli_fetch_assoc($resultado_cerrados);
+// echo $datos_cerrados['cerrados'];
+
+// Consulta tickets totales
+$total="SELECT COUNT(*) as totales FROM tickets;";
+$totales=mysqli_query($conexion,$total);
+$totales_cuenta=mysqli_fetch_assoc($totales);
+// echo $;
+
+
+//
 $consulta = "SELECT * FROM tickets;";
 $tickets=$conexion->query($consulta);
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 	<!-- begin::Head -->
 	<head>
 		<meta charset="utf-8" />
 		<title>Administrador | Tickets</title>
-		<meta name="description" content="Headers datatables examples">
+		<meta name="description" content="Latest updates and statistic charts">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
 		<!--begin::Web font -->
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
 		<script>
@@ -25,19 +43,13 @@ $tickets=$conexion->query($consulta);
                 }
             });
         </script>
-
 		<!--end::Web font -->
-
 		<!--begin::Page Vendors Styles -->
-		<link href="../assets/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
-
+		<link href="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Page Vendors Styles -->
-
 		<!--begin:: Global Mandatory Vendors -->
 		<link href="../assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
-
 		<!--end:: Global Mandatory Vendors -->
-
 		<!--begin:: Global Optional Vendors -->
 		<link href="../assets/vendors/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
@@ -61,20 +73,15 @@ $tickets=$conexion->query($consulta);
 		<link href="../assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/custom/vendors/fontawesome5/css/all.min.css" rel="stylesheet" type="text/css" />
-
 		<!--end:: Global Optional Vendors -->
-
 		<!--begin::Global Theme Styles -->
 		<link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
-
 		<!--end::Global Theme Styles -->
-
 		<!--begin::Layout Skins -->
 		<link href="../assets/demo/default/skins/header/base/light.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/demo/default/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/demo/default/skins/brand/navy.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/demo/default/skins/aside/navy.css" rel="stylesheet" type="text/css" />
-
 		<!--end::Layout Skins -->
 		<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 	</head>
@@ -90,7 +97,7 @@ $tickets=$conexion->query($consulta);
 		<div id="k_header_mobile" class="k-header-mobile  k-header-mobile--fixed ">
 			<div class="k-header-mobile__logo">
 				<a href="index.php">
-					<img alt="Logo" src="../assets/media/logos/logo-6.png" />
+					<img alt="Logo" src="../assets/media/logos/image.png" />
 				</a>
 			</div>
 			<div class="k-header-mobile__toolbar">
@@ -131,8 +138,7 @@ $tickets=$conexion->query($consulta);
 										<ul class="k-menu__subnav">
 											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Tickets</span></span></li>
 											<li class="k-menu__item  k-menu__item--active" aria-haspopup="true"><a href="admin_tickets.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Nuevos</span></a></li>
-											<li class="k-menu__item " aria-haspopup="true"><a href="dashboards_brand-aside.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Estadisticas</span></a></li>
-											<li class="k-menu__item " aria-haspopup="true"><a href="dashboards_navy-header.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Reportes</span></a></li>
+
 										</ul>
 									</div>
 								</li>
@@ -140,40 +146,17 @@ $tickets=$conexion->query($consulta);
 									<div class="k-menu__submenu "><span class="k-menu__arrow"></span>
 										<ul class="k-menu__subnav">
 											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Mantenimiento</span></span></li>
-											<li class="k-menu__item  k-menu__item--active" aria-haspopup="true"><a href="index.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Nuevos</span></a></li>
-											<li class="k-menu__item " aria-haspopup="true"><a href="dashboards_brand-aside.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Estadisticas</span></a></li>
-											<li class="k-menu__item " aria-haspopup="true"><a href="dashboards_navy-header.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Reportes</span></a></li>
+											<li class="k-menu__item  k-menu__item--active" aria-haspopup="true"><a href="calendario" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Nuevos</span></a></li>
+
 										</ul>
 									</div>
 								</li>
 
-								<li class="k-menu__section ">
-									<h4 class="k-menu__section-text">Panel de Control</h4>
-									<i class="k-menu__section-icon flaticon-more-v2"></i>
-								</li>
-								<li class="k-menu__item  k-menu__item--submenu" aria-haspopup="true" data-kmenu-submenu-toggle="hover"><a href="javascript:;" class="k-menu__link k-menu__toggle"><i class="k-menu__link-icon flaticon2-calendar-3"></i><span class="k-menu__link-text">Usuarios</span><i class="k-menu__ver-arrow la la-angle-right"></i></a>
-									<div class="k-menu__submenu "><span class="k-menu__arrow"></span>
-										<ul class="k-menu__subnav">
-											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Usuarios</span></span></li>
-											<li class="k-menu__item " aria-haspopup="true"><a href="admin_usuarios.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Registro de Usuarios</span></a></li>
-										</ul>
-									</div>
-								</li>
-								<li class="k-menu__item  k-menu__item--submenu" aria-haspopup="true" data-kmenu-submenu-toggle="hover"><a href="javascript:;" class="k-menu__link k-menu__toggle"><i class="k-menu__link-icon flaticon2-open-text-book"></i><span class="k-menu__link-text">Materiales</span><i class="k-menu__ver-arrow la la-angle-right"></i></a>
-									<div class="k-menu__submenu "><span class="k-menu__arrow"></span>
-										<ul class="k-menu__subnav">
-											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Materiales</span></span></li>
-											<li class="k-menu__item " aria-haspopup="true"><a href="admin_materiales-laboratorios.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Materiales</span></a></li>
-										</ul>
-									</div>
-								</li>
-								<li class="k-menu__item  k-menu__item--submenu" aria-haspopup="true" data-kmenu-submenu-toggle="hover"><a href="javascript:;" class="k-menu__link k-menu__toggle"><i class="k-menu__link-icon flaticon2-browser-1"></i><span class="k-menu__link-text">Laboratorios</span><i class="k-menu__ver-arrow la la-angle-right"></i></a>
-									<div class="k-menu__submenu "><span class="k-menu__arrow"></span>
-										<ul class="k-menu__subnav">
-											<li class="k-menu__item " aria-haspopup="true"><a href="admin_laboratorios.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Registro de laboratorios</span></a></li>
-										</ul>
-									</div>
-								</li>
+
+
+
+
+
 
 							</ul>
 						</div>
@@ -181,8 +164,6 @@ $tickets=$conexion->query($consulta);
 
 					<!-- end:: Aside Menu -->
 
-					<!-- begin:: Aside -->
-					<!-- end:: Aside -->
 				</div>
 
 				<!-- end:: Aside -->
@@ -195,10 +176,14 @@ $tickets=$conexion->query($consulta);
 						<button class="k-header-menu-wrapper-close" id="k_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
 						<div class="k-header-menu-wrapper" id="k_header_menu_wrapper">
 							<div id="k_header_menu" class="k-header-menu k-header-menu-mobile ">
+								<ul class="k-menu__nav ">
+
+								</ul>
 							</div>
 						</div>
 
 						<!-- end: Header Menu -->
+
 						<!-- begin:: Header Topbar -->
 						<div class="k-header__topbar">
 
@@ -207,7 +192,7 @@ $tickets=$conexion->query($consulta);
 								<div class="k-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px -2px">
 									<div class="k-header__topbar-user">
 										<span class="k-header__topbar-welcome k-hidden-mobile">Bienvenido</span>
-										<span class="k-header__topbar-username k-hidden-mobile">@Administrador</span>
+										<span class="k-header__topbar-username k-hidden-mobile"></span>
 
 
 										<!--use below badge element instead the user avatar to display username's first letter(remove k-hidden class to display it) -->
@@ -252,7 +237,13 @@ $tickets=$conexion->query($consulta);
 									</ul>
 								</div>
 							</div>
+
 							<!--end: User bar -->
+
+							<!--begin: Quick panel toggler -->
+
+
+							<!--end: Quick panel toggler -->
 						</div>
 
 						<!-- end:: Header Topbar -->
@@ -263,108 +254,79 @@ $tickets=$conexion->query($consulta);
 					<!-- begin:: Content -->
 					<div class="k-content	k-grid__item k-grid__item--fluid k-grid k-grid--hor" id="k_content">
 
-						<!-- begin:: Content Head -->
-						<div class="k-content__head	k-grid__item">
-							<div class="k-content__head-main">
-								<h3 class="k-content__head-title">Tickets</h3>
-								<div class="k-content__head-breadcrumbs">
-									<a href="#" class="k-content__head-breadcrumb-home"><i class="flaticon2-shelter"></i></a>
-								</div>
-							</div>
-						</div>
-
-						<!-- end:: Content Head -->
-
 						<!-- begin:: Content Body -->
 						<div class="k-content__body	k-grid__item k-grid__item--fluid" id="k_content_body">
-							<div class="k-portlet k-portlet--mobile">
-								<div class="k-portlet__head">
-									<div class="k-portlet__head-label">
-										<h3 class="k-portlet__head-title">
-											Lista de Tickets
-										</h3>
-									</div>
+
+							<!--begin::Dashboard 1-->
+
+							<!--begin::Row-->
+							<div class="row">
+								<div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1" style="border:#dddada 0.5px solid;">
+
+									<!--begin::Portlet-->
 								</div>
-								<div class="k-portlet__body">
-
-									<!--begin: Datatable -->
-									<table class="table table-striped- table-bordered table-hover table-checkable" id="k_table_1">
-										<thead>
-											<tr>
-												<th>Folio</th>
-												<th>Asunto</th>
-												<th>Fecha</th>
-												<th>Solicitante</th>
-												<th>Correo</th>
-												<th>Prioridad</th>
-												<th>Laboratorio</th>
-												<th>Descripcion</th>
-												
-												<th>Ver</th>
-												<th style="visibility:hidden;"></th>
-											</tr>
-										</thead>
-										<tbody>
-											<?php
-
-						    						$conteo = 0;
-						    							foreach ($tickets as $ticket) {
-						                    $conteo = $conteo + 1;
-						    			?>
-						          <tr>
-						            <td>
-						              <?php echo $conteo; ?>
-						            </td>
-						            <td>
-						              <?php echo $ticket['asunto']; ?>
-						            </td>
-						            <td style="text-align: center">
-						              <?php echo $ticket['fecha_creacion']; ?>
-						            </td>
-						            <td style="text-align: center">
-						              <?php echo $ticket['nombre_solicitante']; ?>
-						            </td>
-						            <td style="text-align: center">
-						              <?php echo $ticket['correo']; ?>
-						            </td>
-						            <td style="text-align: center">
-						              <?php echo $ticket['id_prioridad']; ?>
-						            </td>
-						            <td style="text-align: center">
-						              <?php echo $ticket['id_laboratorio']; ?>
-						            </td>
-												<td style="text-align: center">
-													<?php echo $ticket['descripcion']; ?>
-												</td>
-
-												<td style="text-align: center">
-													<a href="admin_info_tickets.php?<?php echo $ticket['id_ticket']; ?>">Ver</a>
-												</td>
-												<td style="visibility:hidden;" nowrap>
-												</td>
-						          </tr>
-						          <?php
-						    					}
-												?>
-<!--
-												<td>Actualización de word</td>
-												<td>Ameg@ucaribe.edu.mx</td>
-												<td>Alta</td>
-												<td>18/10/2021</td>
-												<td>Activo</td>
-												<td> <a href="#">Ver</a> </td>
-												<td> <a href="#">Eliminar</a> </td>
-												<td> <a href="#">Editar</a> </td> -->
-
-											</tr>
-										</tbody>
-									</table>
-									<!--end: Datatable -->
+								<div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1" style="border:#dddada 0.5px solid">
+									<!-- Inicio Usuarios -->
+									<!--begin::Portlet-->
+									<!-- Final Usuario -->
+									<!--end::Portlet-->
 								</div>
 							</div>
+
+							<!--end::Row-->
+							<!-- Inicio tabla Mantenimiento -->
+							<!--begin::Row-->
+							<div class="row">
+								<div class="col-lg-12 col-xl-12 order-lg-2 order-xl-1" style="border:#dddada 0.5px solid">
+
+								</div>
+
+								<div class="col-lg-12 col-xl-4 order-lg-2 order-xl-1">
+
+								</div>
+								<div class="col-lg-12 col-xl-12 order-lg-3 order-xl-1" style="border:#dddada 0.5px solid">
+
+									<!--begin::Portlet-->
+									<div class="k-portlet k-portlet--height-fluid">
+										<div class="k-portlet__head k-portlet__head--lg k-portlet__head--noborder k-portlet__head--break-sm">
+											<div class="k-portlet__head-label">
+												<h3 class="k-portlet__head-title">Mantenimientos</h3>
+											</div>
+											<div class="k-portlet__head-toolbar">
+												<div class="k-portlet__head-wrapper k-form">
+													<div class="k-form__group k-form__group--inline k-margin-r-10">
+														<div class="k-form__label">Ordenar Por:</div>
+														<div class="k-form__control" style="width: 160px;">
+															<select class="form-control bootstrap-select" id="k_form_status" title="Estatus">
+																<option value="1">Pendientes</option>
+																<option value="2">Realizados</option>
+																<option value="3">Próximos</option>
+															</select>
+														</div>
+													</div>
+													<a href="calendario" class="btn btn-brand btn-upper btn-bold">Nuevo Mantenimiento</a>
+												</div>
+											</div>
+										</div>
+										<div class="k-portlet__body k-portlet__body--fit">
+
+											<!--Doc: For the datatable initialization refer to "recentOrdersInit" function in "src\theme\app\scripts\custom\dashboard.js" -->
+											<div class="k-datatable" id="k_recent_orders"></div>
+										</div>
+									</div>
+
+									<!--end::Portlet-->
+								</div>
+							</div>
+							<!-- Final Mantenimiento -->
+							<!--end::Row-->
+
+							<!--end::Dashboard 1-->
 						</div>
+
 						<!-- end:: Content Body -->
 					</div>
+
 					<!-- end:: Content -->
 
 				</div>
@@ -373,31 +335,11 @@ $tickets=$conexion->query($consulta);
 
 		<!-- end:: Page -->
 
-		<!-- begin:: Topbar Offcanvas Panels -->
-
-		<!-- begin::Offcanvas Toolbar Search -->
-
-		<!-- end::Offcanvas Toolbar Search -->
-
-		<!-- begin::Offcanvas Toolbar Quick Actions -->
-		<!-- end::Offcanvas Toolbar Quick Actions -->
-		<!-- end:: Topbar Offcanvas Panels -->
-
-		<!-- begin::Quick Panel -->
-		<!-- end::Quick Panel -->
 
 		<!-- begin::Scrolltop -->
 		<div id="k_scrolltop" class="k-scrolltop">
 			<i class="la la-arrow-up"></i>
 		</div>
-
-		<!-- end::Scrolltop -->
-
-		<!-- begin::Sticky Toolbar -->
-		<!-- end::Sticky Toolbar -->
-
-		<!-- begin::Demo Panel -->
-		<!-- end::Demo Panel -->
 
 		<!-- begin::Global Config -->
 		<script>
@@ -493,12 +435,12 @@ $tickets=$conexion->query($consulta);
 		<!--end::Global Theme Bundle -->
 
 		<!--begin::Page Vendors -->
-		<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+		<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
 
 		<!--end::Page Vendors -->
 
 		<!--begin::Page Scripts -->
-		<script src="../assets/demo/default/custom/components/datatables/basic/headers.js" type="text/javascript"></script>
+		<script src="../assets/app/scripts/custom/dashboard.js" type="text/javascript"></script>
 
 		<!--end::Page Scripts -->
 

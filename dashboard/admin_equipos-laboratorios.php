@@ -1,7 +1,7 @@
 <?php
 include_once '../includes/conexion.php';
-$consulta = "SELECT * FROM tickets;";
-$tickets=$conexion->query($consulta);
+$consulta = "SELECT * FROM laboratorios;";
+$laboratorios=$conexion->query($consulta);
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ $tickets=$conexion->query($consulta);
 	<!-- begin::Head -->
 	<head>
 		<meta charset="utf-8" />
-		<title>Administrador | Tickets</title>
+		<title>Administrador | Equipos</title>
 		<meta name="description" content="Headers datatables examples">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -89,7 +89,7 @@ $tickets=$conexion->query($consulta);
 		<!-- begin:: Header Mobile -->
 		<div id="k_header_mobile" class="k-header-mobile  k-header-mobile--fixed ">
 			<div class="k-header-mobile__logo">
-				<a href="index.php">
+				<a href="index.html">
 					<img alt="Logo" src="../assets/media/logos/logo-6.png" />
 				</a>
 			</div>
@@ -140,7 +140,7 @@ $tickets=$conexion->query($consulta);
 									<div class="k-menu__submenu "><span class="k-menu__arrow"></span>
 										<ul class="k-menu__subnav">
 											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Mantenimiento</span></span></li>
-											<li class="k-menu__item  k-menu__item--active" aria-haspopup="true"><a href="index.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Nuevos</span></a></li>
+											<li class="k-menu__item  k-menu__item--active" aria-haspopup="true"><a href="index.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Nuevos</span></a></li>
 											<li class="k-menu__item " aria-haspopup="true"><a href="dashboards_brand-aside.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Estadisticas</span></a></li>
 											<li class="k-menu__item " aria-haspopup="true"><a href="dashboards_navy-header.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Reportes</span></a></li>
 										</ul>
@@ -159,11 +159,11 @@ $tickets=$conexion->query($consulta);
 										</ul>
 									</div>
 								</li>
-								<li class="k-menu__item  k-menu__item--submenu" aria-haspopup="true" data-kmenu-submenu-toggle="hover"><a href="javascript:;" class="k-menu__link k-menu__toggle"><i class="k-menu__link-icon flaticon2-open-text-book"></i><span class="k-menu__link-text">Materiales</span><i class="k-menu__ver-arrow la la-angle-right"></i></a>
+								<li class="k-menu__item  k-menu__item--submenu" aria-haspopup="true" data-kmenu-submenu-toggle="hover"><a href="javascript:;" class="k-menu__link k-menu__toggle"><i class="k-menu__link-icon flaticon2-open-text-book"></i><span class="k-menu__link-text">Equipos</span><i class="k-menu__ver-arrow la la-angle-right"></i></a>
 									<div class="k-menu__submenu "><span class="k-menu__arrow"></span>
 										<ul class="k-menu__subnav">
-											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Materiales</span></span></li>
-											<li class="k-menu__item " aria-haspopup="true"><a href="admin_materiales-laboratorios.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Materiales</span></a></li>
+											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Equipos</span></span></li>
+											<li class="k-menu__item " aria-haspopup="true"><a href="admin_Equipos-laboratorios.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Equipos</span></a></li>
 										</ul>
 									</div>
 								</li>
@@ -247,7 +247,7 @@ $tickets=$conexion->query($consulta);
 											</a>
 										</li>
 										<li class="k-nav__item k-nav__item--custom k-margin-t-15">
-											<a href="../index.php" class="btn btn-outline-metal btn-hover-brand btn-upper btn-font-dark btn-sm btn-bold">Cerrar Sesión</a>
+											<a href="../index.html" class="btn btn-outline-metal btn-hover-brand btn-upper btn-font-dark btn-sm btn-bold">Cerrar Sesión</a>
 										</li>
 									</ul>
 								</div>
@@ -266,7 +266,7 @@ $tickets=$conexion->query($consulta);
 						<!-- begin:: Content Head -->
 						<div class="k-content__head	k-grid__item">
 							<div class="k-content__head-main">
-								<h3 class="k-content__head-title">Tickets</h3>
+								<h3 class="k-content__head-title">Equipos</h3>
 								<div class="k-content__head-breadcrumbs">
 									<a href="#" class="k-content__head-breadcrumb-home"><i class="flaticon2-shelter"></i></a>
 								</div>
@@ -281,7 +281,7 @@ $tickets=$conexion->query($consulta);
 								<div class="k-portlet__head">
 									<div class="k-portlet__head-label">
 										<h3 class="k-portlet__head-title">
-											Lista de Tickets
+											Lista de laboratorios
 										</h3>
 									</div>
 								</div>
@@ -291,16 +291,9 @@ $tickets=$conexion->query($consulta);
 									<table class="table table-striped- table-bordered table-hover table-checkable" id="k_table_1">
 										<thead>
 											<tr>
-												<th>Folio</th>
-												<th>Asunto</th>
-												<th>Fecha</th>
-												<th>Solicitante</th>
-												<th>Correo</th>
-												<th>Prioridad</th>
+											<th>ID Laboratorio</th>
+												<th>Fecha de registro</th>
 												<th>Laboratorio</th>
-												<th>Descripcion</th>
-												
-												<th>Ver</th>
 												<th style="visibility:hidden;"></th>
 											</tr>
 										</thead>
@@ -308,40 +301,22 @@ $tickets=$conexion->query($consulta);
 											<?php
 
 						    						$conteo = 0;
-						    							foreach ($tickets as $ticket) {
+						    							foreach ($laboratorios as $laboratorio) {
 						                    $conteo = $conteo + 1;
 						    			?>
 						          <tr>
-						            <td>
+								  <td>
 						              <?php echo $conteo; ?>
 						            </td>
 						            <td>
-						              <?php echo $ticket['asunto']; ?>
+						              <?php echo $laboratorio['fecha_reg']; ?>
 						            </td>
 						            <td style="text-align: center">
-						              <?php echo $ticket['fecha_creacion']; ?>
+						              <?php echo $laboratorio['laboratorio']; ?>
 						            </td>
-						            <td style="text-align: center">
-						              <?php echo $ticket['nombre_solicitante']; ?>
+									<td style="text-align: center">
+									<a href="admin_Equipos.php" ><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span>Equipos</span></a>
 						            </td>
-						            <td style="text-align: center">
-						              <?php echo $ticket['correo']; ?>
-						            </td>
-						            <td style="text-align: center">
-						              <?php echo $ticket['id_prioridad']; ?>
-						            </td>
-						            <td style="text-align: center">
-						              <?php echo $ticket['id_laboratorio']; ?>
-						            </td>
-												<td style="text-align: center">
-													<?php echo $ticket['descripcion']; ?>
-												</td>
-
-												<td style="text-align: center">
-													<a href="admin_info_tickets.php?<?php echo $ticket['id_ticket']; ?>">Ver</a>
-												</td>
-												<td style="visibility:hidden;" nowrap>
-												</td>
 						          </tr>
 						          <?php
 						    					}

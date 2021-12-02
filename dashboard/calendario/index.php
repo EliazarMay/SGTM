@@ -91,7 +91,7 @@ include('config.php');
 		<!-- begin:: Header Mobile -->
 		<div id="k_header_mobile" class="k-header-mobile  k-header-mobile--fixed ">
 			<div class="k-header-mobile__logo">
-				<a href="index.html">
+				<a href="../index.php">
 					<img alt="Logo" src="../../assets/media/logos/image.png" />
 				</a>
 			</div>
@@ -113,7 +113,7 @@ include('config.php');
 					<!-- begin:: Aside -->
 					<div class="k-aside__brand	k-grid__item " id="k_aside_brand">
 						<div class="k-aside__brand-logo">
-							<a href="index.html">
+							<a href="../index.php">
 								<img alt="Logo" src="../../assets/media/logos/image.png" />
 							</a>
 						</div>
@@ -132,9 +132,9 @@ include('config.php');
 									<div class="k-menu__submenu "><span class="k-menu__arrow"></span>
 										<ul class="k-menu__subnav">
 											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Tickets</span></span></li>
-											<li class="k-menu__item  k-menu__item--active" aria-haspopup="true"><a href="admin_tickets.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Nuevos</span></a></li>
-											<li class="k-menu__item " aria-haspopup="true"><a href="dashboards_brand-aside.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Estadisticas</span></a></li>
-											<li class="k-menu__item " aria-haspopup="true"><a href="dashboards_navy-header.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Reportes</span></a></li>
+											<li class="k-menu__item  k-menu__item--active" aria-haspopup="true"><a href="../admin_tickets.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Nuevos</span></a></li>
+											<li class="k-menu__item " aria-haspopup="true"><a href="../admin_tickets_estadisticas.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Estadisticas</span></a></li>
+											<li class="k-menu__item " aria-haspopup="true"><a href="../admin_tickets_reportes.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Reportes</span></a></li>
 										</ul>
 									</div>
 								</li>
@@ -142,9 +142,9 @@ include('config.php');
 									<div class="k-menu__submenu "><span class="k-menu__arrow"></span>
 										<ul class="k-menu__subnav">
 											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Mantenimiento</span></span></li>
-											<li class="k-menu__item  k-menu__item--active" aria-haspopup="true"><a href="admin_mantenimientos.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Nuevos</span></a></li>
-											<li class="k-menu__item " aria-haspopup="true"><a href="dashboards_brand-aside.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Estadisticas</span></a></li>
-											<li class="k-menu__item " aria-haspopup="true"><a href="dashboards_navy-header.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Reportes</span></a></li>
+											<li class="k-menu__item  k-menu__item--active" aria-haspopup="true"><a href="../admin_mantenimientos.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Nuevos</span></a></li>
+											<li class="k-menu__item " aria-haspopup="true"><a href="../admin_mantenimientos_estadisticas.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Estadisticas</span></a></li>
+											<li class="k-menu__item " aria-haspopup="true"><a href="../admin_mantenimientos_reportes.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Reportes</span></a></li>
 										</ul>
 									</div>
 								</li>
@@ -163,7 +163,7 @@ include('config.php');
 									<div class="k-menu__submenu "><span class="k-menu__arrow"></span>
 										<ul class="k-menu__subnav">
 											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Usuarios</span></span></li>
-											<li class="k-menu__item " aria-haspopup="true"><a href="admin_usuarios.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Registro de usuarios</span></a></li>
+											<li class="k-menu__item " aria-haspopup="true"><a href="../admin_usuarios.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Registro de usuarios</span></a></li>
 										</ul>
 									</div>
 								</li>
@@ -171,14 +171,14 @@ include('config.php');
 									<div class="k-menu__submenu "><span class="k-menu__arrow"></span>
 										<ul class="k-menu__subnav">
 											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Materiales</span></span></li>
-											<li class="k-menu__item " aria-haspopup="true"><a href="admin_materiales-laboratorios.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Materiales</span></a></li>
+											<li class="k-menu__item " aria-haspopup="true"><a href="../admin_materiales-laboratorios.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Materiales</span></a></li>
 										</ul>
 									</div>
 								</li>
 								<li class="k-menu__item  k-menu__item--submenu" aria-haspopup="true" data-kmenu-submenu-toggle="hover"><a href="javascript:;" class="k-menu__link k-menu__toggle"><i class="k-menu__link-icon flaticon2-browser-1"></i><span class="k-menu__link-text">Laboratorios</span><i class="k-menu__ver-arrow la la-angle-right"></i></a>
 									<div class="k-menu__submenu "><span class="k-menu__arrow"></span>
 										<ul class="k-menu__subnav">
-											<li class="k-menu__item " aria-haspopup="true"><a href="admin_laboratorios.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Registro de laboratorios</span></a></li>
+											<li class="k-menu__item " aria-haspopup="true"><a href="../admin_laboratorios.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Registro de laboratorios</span></a></li>
 										</ul>
 									</div>
 								</li>
@@ -393,7 +393,8 @@ include('config.php');
                   eventRender: function(event, element) {
                       element
                         .find(".fc-content")
-                        .prepend("<span id='btnCerrar'; class='closeon material-icons'>&#xe5cd;</span>");
+                        .prepend("<span id='btnCerrar'; class='material-icons'>&#xe5c9;</span>");
+
 
                       //Eliminar evento
                       element.find(".closeon").on("click", function() {
@@ -1000,7 +1001,7 @@ include('config.php');
 					<div class="k-demo-panel__item-preview">
 						<img src="../../assets/media/demos-mini/default.png" alt="" />
 						<div class="k-demo-panel__item-preview-overlay">
-							<a href="../default/index.html" class="btn btn-brand btn-elevate" target="_blank">Preview</a>
+							<a href="../default/index.php" class="btn btn-brand btn-elevate" target="_blank">Preview</a>
 						</div>
 					</div>
 				</div>
@@ -1011,7 +1012,7 @@ include('config.php');
 					<div class="k-demo-panel__item-preview">
 						<img src="../../assets/media/demos-mini/demo2.png" alt="" />
 						<div class="k-demo-panel__item-preview-overlay">
-							<a href="../demo2/index.html" class="btn btn-brand btn-elevate" target="_blank">Preview</a>
+							<a href="../demo2/index.php" class="btn btn-brand btn-elevate" target="_blank">Preview</a>
 						</div>
 					</div>
 				</div>
@@ -1022,7 +1023,7 @@ include('config.php');
 					<div class="k-demo-panel__item-preview">
 						<img src="../../assets/media/demos-mini/demo3.png" alt="" />
 						<div class="k-demo-panel__item-preview-overlay">
-							<a href="../demo3/index.html" class="btn btn-brand btn-elevate" target="_blank">Preview</a>
+							<a href="../demo3/index.php" class="btn btn-brand btn-elevate" target="_blank">Preview</a>
 						</div>
 					</div>
 				</div>
@@ -1033,7 +1034,7 @@ include('config.php');
 					<div class="k-demo-panel__item-preview">
 						<img src="../../assets/media/demos-mini/demo4.png" alt="" />
 						<div class="k-demo-panel__item-preview-overlay">
-							<a href="../demo4/index.html" class="btn btn-brand btn-elevate" target="_blank">Preview</a>
+							<a href="../demo4/index.php" class="btn btn-brand btn-elevate" target="_blank">Preview</a>
 						</div>
 					</div>
 				</div>
@@ -1044,7 +1045,7 @@ include('config.php');
 					<div class="k-demo-panel__item-preview">
 						<img src="../../assets/media/demos-mini/demo5.png" alt="" />
 						<div class="k-demo-panel__item-preview-overlay">
-							<a href="../demo5/index.html" class="btn btn-brand btn-elevate" target="_blank">Preview</a>
+							<a href="../demo5/" class="btn btn-brand btn-elevate" target="_blank">Preview</a>
 						</div>
 					</div>
 				</div>

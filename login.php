@@ -31,6 +31,22 @@ if($mail==$consulta[0] && $password==$consulta[1]){
 				echo 'window.location.href="dashboard";';
 				echo '</script>';
 			break;
+			case 2:
+				// code...
+					$_SESSION['correo']=$consulta[0];
+					$_SESSION['password']=$consulta[2];
+					echo '<script>';
+					echo 'window.location.href="dashboard/responsable.php";';
+					echo '</script>';
+				break;
+				case 3:
+					// code...
+						$_SESSION['correo']=$consulta[0];
+						$_SESSION['password']=$consulta[2];
+						echo '<script>';
+						echo 'window.location.href="dashboard/becario.php";';
+						echo '</script>';
+					break;
 		default:
 
 				echo '<script>';

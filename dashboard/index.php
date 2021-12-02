@@ -1,6 +1,31 @@
+<?php
+include_once '../includes/conexion.php';
+// Consulta tickets abiertos
+$activos="SELECT COUNT(*) as total FROM tickets WHERE id_estatus_ticket = 1;";
+$resultado_activos=mysqli_query($conexion,$activos);
+$datos_activos=mysqli_fetch_assoc($resultado_activos);
+// echo $datos_activos['total'];
+
+// Copnsulta tickets cerrados
+$cerrados="SELECT COUNT(*) as cerrados FROM tickets WHERE id_estatus_ticket = 2;";
+$resultado_cerrados=mysqli_query($conexion,$cerrados);
+$datos_cerrados=mysqli_fetch_assoc($resultado_cerrados);
+// echo $datos_cerrados['cerrados'];
+
+// Consulta tickets totales
+$total="SELECT COUNT(*) as totales FROM tickets;";
+$totales=mysqli_query($conexion,$total);
+$totales_cuenta=mysqli_fetch_assoc($totales);
+// echo $;
+
+
+//
+$consulta = "SELECT * FROM tickets;";
+$tickets=$conexion->query($consulta);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 	<!-- begin::Head -->
 	<head>
 		<meta charset="utf-8" />
@@ -113,7 +138,7 @@
 										<ul class="k-menu__subnav">
 											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Tickets</span></span></li>
 											<li class="k-menu__item  k-menu__item--active" aria-haspopup="true"><a href="admin_tickets.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Nuevos</span></a></li>
-											<li class="k-menu__item " aria-haspopup="true"><a href="dashboards_brand-aside.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Estadisticas</span></a></li>
+											<li class="k-menu__item " aria-haspopup="true"><a href="admin_tickets_estadisticas.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Estadisticas</span></a></li>
 											<li class="k-menu__item " aria-haspopup="true"><a href="dashboards_navy-header.html" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Reportes</span></a></li>
 										</ul>
 									</div>
@@ -152,6 +177,7 @@
 										<ul class="k-menu__subnav">
 											<li class="k-menu__item  k-menu__item--parent" aria-haspopup="true"><span class="k-menu__link"><span class="k-menu__link-text">Materiales</span></span></li>
 											<li class="k-menu__item " aria-haspopup="true"><a href="admin_materiales-laboratorios.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Materiales</span></a></li>
+											<li class="k-menu__item " aria-haspopup="true"><a href="admin_equipos-laboratorios.php" class="k-menu__link "><i class="k-menu__link-bullet k-menu__link-bullet--dot"><span></span></i><span class="k-menu__link-text">Equipos</span></a></li>
 										</ul>
 									</div>
 								</li>
@@ -292,50 +318,41 @@
 													<div class="k-widget-5">
 														<div class="k-widget-5__item k-widget-5__item--info">
 															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Taladro no funciona
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	09:30 AM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--danger">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Reporte de incidencias
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	12:00 AM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
-															</div>
-														</div>
-														<div class="k-widget-5__item k-widget-5__item--success">
-															<div class="k-widget-5__item-info">
-																<a href="#" class="k-widget-5__item-title">
-																	Prestamo de materiales
-																</a>
-																<div class="k-widget-5__item-datetime">
-																	4: 30 PM
-																</div>
-															</div>
-															<div class="k-widget-5__item-check">
-																<label class="k-radio">
-																	<input type="radio" checked="checked" name="radio1">
-																	<span></span>
-																</label>
+																<table>
+																	<thead>
+																		<tr>
+																			<th></th>
+																		</tr>
+																	</thead>
+
+
+																	<tbody>
+																		<?php
+
+																		$conteo = 0;
+																		foreach ($tickets as $ticket) {
+																			$conteo = $conteo + 1;
+																			?>
+																		<tr>
+																			<td>
+																				<a href="#" class="k-widget-5__item-title">
+																					<?php echo $ticket['asunto']; ?>
+																				</a>
+																				<div class="k-widget-5__item-datetime">
+																					<?php echo $ticket['fecha_creacion']; ?>
+																				</div>
+																				<br>
+																			</td>
+																		</tr>
+																		<?php
+																	}
+																	?>
+
+																	</tbody>
+																</table>
+																<!--  -->
+
+																	<!--  -->
 															</div>
 														</div>
 													</div>
@@ -456,7 +473,7 @@
 											<div class="k-portlet__head-toolbar">
 												<div class="k-portlet__head-toolbar-wrapper">
 														<div class="k-portlet__head-actions">
-															<a href="#" class="btn btn-default btn-sm btn-bold btn-upper">Ver Todos</a>
+															<a href="admin_tickets.php" class="btn btn-default btn-sm btn-bold btn-upper">Ver Todos</a>
 														</div>
 												</div>
 											</div>
@@ -464,7 +481,9 @@
 										<div class="k-portlet__body k-portlet__body--fluid">
 											<div class="k-widget-21">
 												<div class="k-widget-21__title">
-													<div class="k-widget-21__label">Total: 2</div>
+													<div class="k-widget-21__label">Total: <?php echo $totales_cuenta['totales']; ?></div>
+
+
 													<img src="../assets/media/misc/iconbox_bg.png" class="k-widget-21__bg" alt="bg" />
 												</div>
 												<div class="k-widget-21__data">
@@ -624,7 +643,7 @@
 															</select>
 														</div>
 													</div>
-													<a href="#" class="btn btn-brand btn-upper btn-bold">Nuevo Mantenimiento</a>
+													<a href="calendario" class="btn btn-brand btn-upper btn-bold">Nuevo Mantenimiento</a>
 												</div>
 											</div>
 										</div>

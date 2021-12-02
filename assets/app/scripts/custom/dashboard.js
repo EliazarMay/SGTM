@@ -865,15 +865,15 @@ var KDashboard = function() {
                 template: function(row) {
                     var status = {
                         1: {
-                            'title': 'Pending',
+                            'title': 'Sin estatus',
                             'class': 'brand'
                         },
                         2: {
-                            'title': 'Delivered',
+                            'title': 'En progreso',
                             'class': 'focus'
                         },
                         3: {
-                            'title': 'Canceled',
+                            'title': 'Rechazado',
                             'class': 'primary'
                         },
                         4: {
